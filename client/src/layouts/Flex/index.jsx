@@ -53,7 +53,7 @@ const Flex = ({
 export { Flex };
 
 Flex.propTypes = {
-  flexDirection: PropTypes.number,
+  flexDirection: PropTypes.string,
   flexWrap: PropTypes.number,
   alignContent: PropTypes.number,
   justifyContent: PropTypes.number,
