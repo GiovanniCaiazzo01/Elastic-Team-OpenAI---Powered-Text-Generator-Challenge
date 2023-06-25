@@ -6,7 +6,7 @@ export const StyledContainer = styled.div`
 
   // PADDING SECTION
   ${(props) =>
-    props.padding && `padding: ${props.theme.sizes.px[props.padding]}`}
+    props.padding && `padding: ${props.theme.sizes.px[props.padding]};`}
     ${(props) =>
     props.paddingTop &&
     !props.padding &&
@@ -26,7 +26,7 @@ ${(props) =>
 
     // MARGIN SECTION
     ${(props) =>
-    props.margin && `margin: ${props.theme.sizes.px[props.margin]}`}
+    props.margin && `margin: ${props.theme.sizes.px[props.margin]};`}
         ${(props) =>
     props.marginTop &&
     !props.margin &&
@@ -47,10 +47,10 @@ ${(props) =>
     //BORDER SECTION
     ${(props) =>
     props.borderRadius &&
-    `border-radius: ${props.theme.sizes.px[props.borderRadius]}`}
+    `border-radius: ${props.theme.sizes.px[props.borderRadius]};`}
 
     //BACKGROND SECTION
     ${(props) =>
     props.backgroundColor &&
-    `background-color: ${props.theme.color[props.backgroundColor]}`}
+    `background-color: ${props.theme.colors[props.backgroundColor]};`}
 `;

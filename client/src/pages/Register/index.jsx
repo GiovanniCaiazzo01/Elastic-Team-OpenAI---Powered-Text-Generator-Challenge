@@ -1,7 +1,11 @@
-import { Container } from "../../layouts/Container";
+import { Container } from "../../layouts";
 
 const Register = () => {
-  return <Container />;
+  return (
+    <Container padding={19} backgroundColor="primary">
+      <div>register</div>
+    </Container>
+  );
 };
 
 export { Register };

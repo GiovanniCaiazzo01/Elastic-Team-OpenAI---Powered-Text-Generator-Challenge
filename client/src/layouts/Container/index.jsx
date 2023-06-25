@@ -45,7 +45,7 @@ export { Container };
 Container.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
-  backgroundColor: PropTypes.number,
+  backgroundColor: PropTypes.string,
   borderRadius: PropTypes.number,
   padding: PropTypes.number,
   paddingLeft: PropTypes.number,
