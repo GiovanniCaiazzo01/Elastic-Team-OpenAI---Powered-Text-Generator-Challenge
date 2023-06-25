@@ -1,5 +1,7 @@
+import { Container } from "../../layouts/Container";
+
 const Register = () => {
-  return <div>Register</div>;
+  return <Container />;
 };
 
 export { Register };
