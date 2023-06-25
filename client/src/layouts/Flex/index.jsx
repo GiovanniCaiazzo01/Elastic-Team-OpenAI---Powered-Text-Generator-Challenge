@@ -72,5 +72,5 @@ Flex.propTypes = {
   marginRight: PropTypes.number,
   marginTop: PropTypes.number,
   marginBottom: PropTypes.number,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
 };
