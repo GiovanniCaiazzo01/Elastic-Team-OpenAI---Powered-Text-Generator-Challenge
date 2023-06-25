@@ -1,9 +1,12 @@
-import { Container } from "../../layouts";
+import { Container, Flex } from "../../layouts";
 
 const Register = () => {
   return (
     <Container padding={19} backgroundColor="primary">
-      <div>register</div>
+      <Flex>
+        <div>Register</div>
+        <div>Register</div>
+      </Flex>
     </Container>
   );
 };

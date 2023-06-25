@@ -15,5 +15,6 @@ const PublicRoute = ({ isCentered, component: Component }) => {
 export { PublicRoute };
 
 PublicRoute.propTypes = {
+  component: PropTypes.element,
   isCentered: PropTypes.bool,
 };

@@ -1,6 +1,6 @@
 import loadable from "@loadable/component";
 import { Routes, Route } from "react-router-dom";
-import { PublicRoute, PrivateRoute } from "../components";
+import { PublicRoute } from "../components";
 
 const Login = loadable(() => import("../pages/"), {
   resolveComponent: (components) => components.Login,

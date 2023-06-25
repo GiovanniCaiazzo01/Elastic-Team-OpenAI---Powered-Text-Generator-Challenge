@@ -41,4 +41,12 @@ export const theme = {
     ],
     rem: ["1rem", "2rem", "3rem"],
   },
+  flexAlignment: [
+    "flex-start", // 0
+    "center", // 1
+    "flex-end", // 2
+    "space-between", // 3
+    "space-around", // 4
+    "space-evenly", // 5
+  ],
 };

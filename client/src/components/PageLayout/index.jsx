@@ -2,7 +2,7 @@ import { CenteredContainer } from "../../layouts";
 import PropTypes from "prop-types";
 
 const PageLayout = ({ children }) => {
-  return <CenteredContainer> {children}</CenteredContainer>;
+  return <CenteredContainer>{children}</CenteredContainer>;
 };
 
 export { PageLayout };
