@@ -6,10 +6,24 @@ export const theme = {
     backGround: "#FFFFFF",
     BrandGreen: "#46B455",
   },
+  generalAlignment: ["left", "center", "right"],
   fonts: {
     body: "Arial, sans-serif",
     heading: "Helvetica, sans-serif",
   },
+  fontWeight: [
+    "100", // 0
+    "200", // 1
+    "300", // 2
+    "400", // 3
+    "500", // 4
+    "600", // 5
+    "700", // 6
+    "800", // 7
+    "900", // 8
+    "bold", // 9
+    "bolder", // 10
+  ],
   breakpoints: {
     mobile: "576px",
     tablet: "768px",
@@ -38,7 +52,7 @@ export const theme = {
       "36px", // 17
       "38px", // 18
       "40px", // 19
-    ],
+    ], //0      //1     // 2
     rem: ["1rem", "2rem", "3rem"],
   },
   flexAlignment: [
