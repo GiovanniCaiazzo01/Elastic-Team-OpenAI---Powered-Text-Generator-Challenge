@@ -17,7 +17,7 @@ const MainRoutes = () => {
       <Route
         exact
         path="/register"
-        element={<PublicRoute component={Register} />}
+        element={<PublicRoute isCentered component={Register} />}
       />
     </Routes>
   );
