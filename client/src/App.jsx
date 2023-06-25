@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
-import { ThemeProvider } from "styled-componets";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./themes/theme";
 import MainRoutes from "./routes/MainRoutes";
-import { theme } from "./themes/";
 import "./App.css";
 
 const App = () => {
