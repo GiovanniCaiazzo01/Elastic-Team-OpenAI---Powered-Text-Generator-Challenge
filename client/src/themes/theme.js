@@ -2,14 +2,16 @@ export const theme = {
   colors: {
     primary: "#FF007A",
     black: "#000000",
-    darkGray: "#2D3142",
+    darkGrey: "#2D3142",
+    lightGrey: "#A4A9BF",
     backGround: "#FFFFFF",
     brandGreen: "#46B455",
   },
+
   generalAlignment: ["left", "center", "right"],
   fonts: {
-    body: "Arial, sans-serif",
-    heading: "Helvetica, sans-serif",
+    main: "Poppins, sans-serif",
+    secondary: "Helvetica, sans-serif",
   },
   fontWeight: [
     "100", // 0
@@ -52,7 +54,12 @@ export const theme = {
       "36px", // 17
       "38px", // 18
       "40px", // 19
-    ], //0      //1     // 2
+      "42px", // 20
+      "44px", // 21
+      "46px", // 22
+      "48px", // 23
+      "50px", // 24
+    ],
     rem: [
       "0.125rem", // 0
       "0.25rem", // 1
