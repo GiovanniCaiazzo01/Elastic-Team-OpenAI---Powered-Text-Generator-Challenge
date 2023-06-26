@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const StyledContainer = styled.div`
-  ${(props) => props.width && `width: ${props.theme.sizes.px[props.width]};`}
-  ${(props) => props.height && `height: ${props.theme.sizes.px[props.height]};`}
+  ${(props) => props.width && `width: ${props.width}px;`}
+  ${(props) => props.maxWidth && `max-width: ${props.maxWidth}px;`}
+  ${(props) => props.height && `height: ${props.height};`}
 
   // PADDING SECTION
   ${(props) =>

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 const Container = ({
   width,
+  maxWidth,
   height,
   backgroundColor,
   borderRadius,
@@ -21,6 +22,7 @@ const Container = ({
   return (
     <StyledContainer
       width={width}
+      maxWidth={maxWidth}
       height={height}
       backgroundColor={backgroundColor}
       borderRadius={borderRadius}
@@ -44,6 +46,7 @@ export { Container };
 
 Container.propTypes = {
   width: PropTypes.number,
+  maxWidth: PropTypes.number,
   height: PropTypes.number,
   backgroundColor: PropTypes.string,
   borderRadius: PropTypes.number,
