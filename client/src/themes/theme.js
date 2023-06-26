@@ -11,7 +11,7 @@ export const theme = {
   generalAlignment: ["left", "center", "right"],
   fonts: {
     main: "Poppins, sans-serif",
-    secondary: "Helvetica, sans-serif",
+    secondary: "Segoe UI, sans-serif",
   },
   fontWeight: [
     "100", // 0

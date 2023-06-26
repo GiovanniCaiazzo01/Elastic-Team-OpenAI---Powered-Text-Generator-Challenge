@@ -2,3 +2,8 @@ body {
   padding: 0;
   margin: 0;
 }
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("./fonts/segoe-ui-4-cufonfonts/Segoe\ UI.ttf");
+}

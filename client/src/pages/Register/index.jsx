@@ -36,9 +36,10 @@ const Register = () => {
         <Text
           color="darkGrey"
           fontWeight={6}
+          fontFamily="secondary"
           fontSize={9}
           lineHeight={13}
-          marginBottom={4}
+          marginBottom={7}
         >
           Sign up
         </Text>
@@ -58,6 +59,7 @@ const Register = () => {
           borderRadius={1}
           height={23}
           color="lightGrey"
+          marginBottom={4}
         />
         <Text
           fontFamily="main"
@@ -75,6 +77,7 @@ const Register = () => {
           borderRadius={1}
           height={23}
           color="lightGrey"
+          marginBottom={4}
         />
         <Text
           fontFamily="main"
@@ -92,7 +95,12 @@ const Register = () => {
           borderRadius={1}
           height={23}
           color="lightGrey"
+          marginBottom={4}
         />
+        <Flex fullWidth justifyContent={3}>
+          <button>dda</button>
+          <a>link</a>
+        </Flex>
       </Flex>
     </Container>
   );
