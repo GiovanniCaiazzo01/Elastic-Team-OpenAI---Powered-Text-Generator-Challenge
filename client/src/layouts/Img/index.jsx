@@ -19,18 +19,20 @@ const Img = ({
   isLogo,
 }) => {
   return (
-    <StyledImg
-      src={isLogo ? logo_img : otherImage[src]}
-      alt={alt}
-      width={width}
-      height={height}
-      loading="lazy"
-      margin={margin}
-      marginTop={marginTop}
-      marginBottom={marginBottom}
-      marginLeft={marginLeft}
-      marginRight={marginRight}
-    />
+    <div>
+      <StyledImg
+        src={isLogo ? logo_img : otherImage[src]}
+        alt={alt}
+        width={width}
+        height={height}
+        loading="lazy"
+        margin={margin}
+        marginTop={marginTop}
+        marginBottom={marginBottom}
+        marginLeft={marginLeft}
+        marginRight={marginRight}
+      />
+    </div>
   );
 };
 
