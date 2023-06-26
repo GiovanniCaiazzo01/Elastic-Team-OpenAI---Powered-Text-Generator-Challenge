@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { StyledContainer } from "../Container/style";
 
 export const StyledFlex = styled(StyledContainer)`
+  ${(props) => props.fullWidth && `width: 100%;`}
   display: flex;
   flex-direction: ${(props) =>
     props.flexDirection === "column" ? "column" : "row"};
