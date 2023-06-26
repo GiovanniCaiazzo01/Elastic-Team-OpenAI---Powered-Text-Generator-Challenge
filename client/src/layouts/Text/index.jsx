@@ -6,7 +6,13 @@ const Text = ({
   fontSize,
   fontFamily,
   textAlign,
+  lineHeight,
   color,
+  margin,
+  marginLeft,
+  marginRight,
+  marginTop,
+  marginBottom,
   children,
 }) => {
   return (
@@ -15,7 +21,13 @@ const Text = ({
       fontSize={fontSize}
       fontFamily={fontFamily}
       textAlign={textAlign}
+      lineHeight={lineHeight}
       color={color}
+      margin={margin}
+      marginLeft={marginLeft}
+      marginRight={marginRight}
+      marginTop={marginTop}
+      marginBottom={marginBottom}
     >
       {children}
     </StyledText>
@@ -25,10 +37,16 @@ const Text = ({
 export { Text };
 
 Text.propTypes = {
-  fontWeight: PropTypes.string,
+  fontWeight: PropTypes.number,
   fontSize: PropTypes.number,
   fontFamily: PropTypes.string,
   textAlign: PropTypes.number,
+  lineHeight: PropTypes.number,
   color: PropTypes.string,
+  margin: PropTypes.number,
+  marginLeft: PropTypes.number,
+  marginRight: PropTypes.number,
+  marginTop: PropTypes.number,
+  marginBottom: PropTypes.number,
   children: PropTypes.node,
 };

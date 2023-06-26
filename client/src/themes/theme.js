@@ -2,9 +2,9 @@ export const theme = {
   colors: {
     primary: "#FF007A",
     black: "#000000",
-    darkGray: "#FF007A",
+    darkGray: "#2D3142",
     backGround: "#FFFFFF",
-    BrandGreen: "#46B455",
+    brandGreen: "#46B455",
   },
   generalAlignment: ["left", "center", "right"],
   fonts: {
@@ -53,7 +53,24 @@ export const theme = {
       "38px", // 18
       "40px", // 19
     ], //0      //1     // 2
-    rem: ["1rem", "2rem", "3rem"],
+    rem: [
+      "0.125rem", // 0
+      "0.25rem", // 1
+      "0.375rem", // 2
+      "0.5rem", // 3
+      "0.625rem", // 4
+      "0.75rem", // 5
+      "0.875", // 6
+      "1rem", // 7
+      "1.125rem", // 8
+      "1.25rem", // 9
+      "1.375rem", // 10
+      "1.5rem", // 11
+      "1.625rem", // 12
+      "1.75rem", // 13
+      "1.875rem", // 14
+      "2rem", // 15
+    ],
   },
   flexAlignment: [
     "flex-start", // 0
