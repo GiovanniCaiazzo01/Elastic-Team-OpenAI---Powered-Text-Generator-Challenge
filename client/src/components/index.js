@@ -1,3 +1,4 @@
+export { LogoWithText } from "./LogoWithText";
 export { Logo } from "./Logo";
 export { PageLayout } from "./PageLayout";
 export { PrivateRoute } from "./PrivateRoute";
