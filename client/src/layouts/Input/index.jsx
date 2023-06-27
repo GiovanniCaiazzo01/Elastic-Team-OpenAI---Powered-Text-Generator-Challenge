@@ -21,6 +21,7 @@ const Input = ({
   border,
   borderRadius,
   backgroundColor,
+  type,
 }) => {
   return (
     <StyledInput
@@ -43,6 +44,7 @@ const Input = ({
       border={border}
       borderRadius={borderRadius}
       backgroundColor={backgroundColor}
+      type={type}
     />
   );
 };
@@ -69,4 +71,5 @@ Input.propTypes = {
   border: PropTypes.object,
   borderRadius: PropTypes.number,
   backgroundColor: PropTypes.string,
+  type: PropTypes.string.isRequired,
 };

@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
 import { StyledFlex } from "./style";
+import PropTypes from "prop-types";
 
 const Flex = ({
   flexDirection,

@@ -1,38 +1,13 @@
-import { Logo } from "../../components";
+import { LogoWithText } from "../../components";
 import { Button, Container, Flex, Input, Text, Link } from "../../layouts";
 const Login = () => {
   return (
     <Container padding={4} width={503} maxWidth={503}>
       <Flex flexDirection="column">
-        <Flex
-          flexDirection="row"
-          fullWidth
-          justifyContent={0}
-          width={19}
-          marginBottom={11}
-        >
-          <Logo />
-          <Flex flexDirection="column" justifyContent={1}>
-            <Text
-              color="primary"
-              fontSize={8}
-              fontFamily="main"
-              fontWeight={5}
-              lineHeight={13}
-            >
-              Elastic Team
-            </Text>
-            <Text
-              fontSize={8}
-              fontFamily="main"
-              fontWeight={5}
-              color="black"
-              lineHeight={13}
-            >
-              Real-time Chat App
-            </Text>
-          </Flex>
-        </Flex>
+        <LogoWithText
+          firstLabel="Elastic Team"
+          secondLabel="Real-time Chat App"
+        />
         <Text
           color="darkGrey"
           fontWeight={6}
@@ -69,7 +44,7 @@ const Login = () => {
           lineHeight={13}
           marginBottom={7}
         >
-          Full Name
+          Password
         </Text>
         <Input
           fullWidth

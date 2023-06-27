@@ -68,4 +68,6 @@ ${(props) =>
     ${(props) =>
     props.backgroundColor &&
     `background-color: ${props.theme.colors[props.backgroundColor]};`}
+
+    box-sizing: border;
 `;
