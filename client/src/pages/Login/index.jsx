@@ -105,6 +105,7 @@ const Login = () => {
             fontFamily="main"
             color="midGrey"
             lineHeight={11}
+            href="/register"
           >
             Sign up
           </Link>

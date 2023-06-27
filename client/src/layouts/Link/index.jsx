@@ -1,6 +1,7 @@
 import { Text } from "../Text";
-import { StyledLink } from "./style";
 import PropTypes from "prop-types";
+
+import { Link as Reactlink } from "react-router-dom";
 
 const Link = ({
   fontWeight,
@@ -14,16 +15,11 @@ const Link = ({
   marginRight,
   marginTop,
   marginBottom,
+  href,
   children,
 }) => {
   return (
-    <StyledLink
-      margin={margin}
-      marginLeft={marginLeft}
-      marginRight={marginRight}
-      marginTop={marginTop}
-      marginBottom={marginBottom}
-    >
+    <Reactlink to={href}>
       <Text
         fontWeight={fontWeight}
         fontSize={fontSize}
@@ -31,10 +27,15 @@ const Link = ({
         textAlign={textAlign}
         lineHeight={lineHeight}
         color={color}
+        margin={margin}
+        marginLeft={marginLeft}
+        marginRight={marginRight}
+        marginTop={marginTop}
+        marginBottom={marginBottom}
       >
         {children}
       </Text>
-    </StyledLink>
+    </Reactlink>
   );
 };
 
@@ -42,6 +43,7 @@ export { Link };
 
 Link.propTypes = {
   color: PropTypes.string,
+  href: PropTypes.string.isRequired,
   fontFamily: PropTypes.string,
   fontWeight: PropTypes.number,
   fontSize: PropTypes.number,

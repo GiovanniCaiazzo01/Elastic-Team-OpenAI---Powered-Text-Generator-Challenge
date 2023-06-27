@@ -122,6 +122,7 @@ const Register = () => {
             fontFamily="main"
             color="midGrey"
             lineHeight={11}
+            href="/login"
           >
             Log in
           </Link>
