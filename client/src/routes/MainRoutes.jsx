@@ -13,7 +13,11 @@ const Register = loadable(() => import("../pages/"), {
 const MainRoutes = () => {
   return (
     <Routes>
-      <Route exact path="/login" element={<PublicRoute component={Login} />} />
+      <Route
+        exact
+        path="/login"
+        element={<PublicRoute isCentered component={Login} />}
+      />
       <Route
         exact
         path="/register"
