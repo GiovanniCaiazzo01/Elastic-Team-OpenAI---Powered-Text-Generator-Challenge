@@ -4,7 +4,7 @@ export const theme = {
     black: "#000000",
     darkGrey: "#2D3142",
     lightGrey: "#A4A9BF",
-    backGround: "#FFFFFF",
+    white: "#FFFFFF",
     brandGreen: "#46B455",
   },
 
