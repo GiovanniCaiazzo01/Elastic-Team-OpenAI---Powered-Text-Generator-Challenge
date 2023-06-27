@@ -2,17 +2,16 @@ import { Flex, Text } from "../../layouts";
 import { Logo } from "../../components";
 import PropTypes from "prop-types";
 
-const LogoWithText = ({ firstLabel, secondLabel }) => {
+const LogoWithText = ({ firstLabel, secondLabel, marginBottom }) => {
   return (
     <Flex
       flexDirection="row"
       fullWidth
       justifyContent={0}
-      width={19}
-      marginBottom={11}
+      marginBottom={marginBottom}
     >
       <Logo />
-      <Flex flexDirection="column" justifyContent={1}>
+      <Flex flexDirection="column" justifyContent={0}>
         <Text
           color="primary"
           fontSize={8}
@@ -27,7 +26,7 @@ const LogoWithText = ({ firstLabel, secondLabel }) => {
           fontFamily="main"
           fontWeight={5}
           color="black"
-          lineHeight={13}
+          lineHeight={6}
         >
           {secondLabel}
         </Text>
@@ -41,4 +40,5 @@ export { LogoWithText };
 LogoWithText.propTypes = {
   firstLabel: PropTypes.string.isRequired,
   secondLabel: PropTypes.string.isRequired,
+  marginBottom: PropTypes.number,
 };

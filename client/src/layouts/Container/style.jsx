@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledContainer = styled.div`
   ${(props) => props.width && `width: ${props.width}px;`}
   ${(props) => props.maxWidth && `max-width: ${props.maxWidth}px;`}
-  ${(props) => props.height && `height: ${props.height};`}
+  ${(props) => props.height && `height: ${props.height}px;`}
 
   // PADDING SECTION
   ${(props) =>

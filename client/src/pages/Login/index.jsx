@@ -7,6 +7,7 @@ const Login = () => {
         <LogoWithText
           firstLabel="Elastic Team"
           secondLabel="Real-time Chat App"
+          marginBottom={11}
         />
         <Text
           color="darkGrey"
@@ -35,6 +36,8 @@ const Login = () => {
           height={23}
           color="lightGrey"
           marginBottom={7}
+          padding={5}
+          type="email"
         />
         <Text
           fontFamily="main"
@@ -53,6 +56,8 @@ const Login = () => {
           height={23}
           color="lightGrey"
           marginBottom={7}
+          padding={5}
+          Input="password"
         />
 
         <Flex fullWidth justifyContent={3} marginTop={19} alignItems={1}>

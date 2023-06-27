@@ -10,6 +10,10 @@ const Register = loadable(() => import("../pages/"), {
   resolveComponent: (components) => components.Register,
 });
 
+const Chat = loadable(() => import("../pages/"), {
+  resolveComponent: (components) => components.Chat,
+});
+
 const MainRoutes = () => {
   return (
     <Routes>
@@ -23,6 +27,7 @@ const MainRoutes = () => {
         path="/register"
         element={<PublicRoute isCentered component={Register} />}
       />
+      <Route exact path="/chat" element={<PublicRoute component={Chat} />} />
     </Routes>
   );
 };

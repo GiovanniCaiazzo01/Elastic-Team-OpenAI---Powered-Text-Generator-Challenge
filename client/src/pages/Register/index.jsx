@@ -7,6 +7,7 @@ const Register = () => {
         <LogoWithText
           firstLabel="Elastic Team"
           secondLabel="Real-time Chat App"
+          marginBottom={11}
         />
         <Text
           color="darkGrey"
