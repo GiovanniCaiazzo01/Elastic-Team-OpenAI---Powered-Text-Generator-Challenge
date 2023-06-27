@@ -9,7 +9,7 @@ const Register = () => {
           fullWidth
           justifyContent={0}
           width={19}
-          marginBottom={8}
+          marginBottom={11}
         >
           <Logo />
           <Flex flexDirection="column" justifyContent={1}>
@@ -39,7 +39,7 @@ const Register = () => {
           fontFamily="secondary"
           fontSize={9}
           lineHeight={13}
-          marginBottom={7}
+          marginBottom={11}
         >
           Sign up
         </Text>
@@ -49,7 +49,7 @@ const Register = () => {
           fontWeight={3}
           fontSize={7}
           lineHeight={13}
-          marginBottom={4}
+          marginBottom={7}
         >
           Email Address
         </Text>
@@ -59,7 +59,7 @@ const Register = () => {
           borderRadius={1}
           height={23}
           color="lightGrey"
-          marginBottom={4}
+          marginBottom={7}
         />
         <Text
           fontFamily="main"
@@ -67,7 +67,7 @@ const Register = () => {
           fontWeight={3}
           fontSize={7}
           lineHeight={13}
-          marginBottom={4}
+          marginBottom={7}
         >
           Full Name
         </Text>
@@ -77,7 +77,7 @@ const Register = () => {
           borderRadius={1}
           height={23}
           color="lightGrey"
-          marginBottom={4}
+          marginBottom={7}
         />
         <Text
           fontFamily="main"
@@ -85,7 +85,7 @@ const Register = () => {
           fontWeight={3}
           fontSize={7}
           lineHeight={13}
-          marginBottom={4}
+          marginBottom={7}
         >
           Password
         </Text>
@@ -95,9 +95,9 @@ const Register = () => {
           borderRadius={1}
           height={23}
           color="lightGrey"
-          marginBottom={4}
+          marginBottom={7}
         />
-        <Flex fullWidth justifyContent={3}>
+        <Flex fullWidth justifyContent={3} marginTop={19}>
           <Button
             backgroundColor="brandGreen"
             paddingLeft={15}
