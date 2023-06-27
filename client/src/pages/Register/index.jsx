@@ -1,5 +1,5 @@
 import { Logo } from "../../components";
-import { Button, Container, Flex, Input, Text } from "../../layouts";
+import { Button, Container, Flex, Input, Text, Link } from "../../layouts";
 const Register = () => {
   return (
     <Container padding={4} width={503} maxWidth={503}>
@@ -97,7 +97,7 @@ const Register = () => {
           color="lightGrey"
           marginBottom={7}
         />
-        <Flex fullWidth justifyContent={3} marginTop={19}>
+        <Flex fullWidth justifyContent={3} marginTop={19} alignItems={1}>
           <Button
             backgroundColor="brandGreen"
             paddingLeft={15}
@@ -110,12 +110,21 @@ const Register = () => {
               color="white"
               fontFamily="main"
               fontWeight={6}
+              fontSize={7}
               lineHeight={15}
             >
               Sign up
             </Text>
           </Button>
-          <a>link</a>
+          <Link
+            fontWeight={3}
+            fontSize={7}
+            fontFamily="main"
+            color="midGrey"
+            lineHeight={11}
+          >
+            Log in
+          </Link>
         </Flex>
       </Flex>
     </Container>
