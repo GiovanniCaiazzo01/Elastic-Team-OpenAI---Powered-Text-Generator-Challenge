@@ -2,10 +2,13 @@ export const theme = {
   colors: {
     primary: "#FF007A",
     black: "#000000",
+    linearBlack: "#0F0F0F",
     darkGrey: "#2D3142",
-    lightGrey: "#A4A9BF",
     midGrey: "#656C8C",
+    lightGrey: "#A4A9BF",
+    softGrey: "#E0E0E0",
     white: "#FFFFFF",
+    whiteGrey: "#F1F1F1",
     brandGreen: "#46B455",
   },
 
@@ -13,6 +16,7 @@ export const theme = {
   fonts: {
     main: "Poppins, sans-serif",
     secondary: "Segoe UI, sans-serif",
+    tertiary: "Inter, sans-serif",
   },
   fontWeight: [
     "100", // 0

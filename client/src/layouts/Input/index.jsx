@@ -19,6 +19,10 @@ const Input = ({
   marginRight,
   color,
   border,
+  borderTop,
+  borderBottom,
+  borderLeft,
+  borderRight,
   borderRadius,
   backgroundColor,
   type,
@@ -42,6 +46,10 @@ const Input = ({
       marginRight={marginRight}
       color={color}
       border={border}
+      borderTop={borderTop}
+      borderBottom={borderBottom}
+      borderLeft={borderLeft}
+      borderRight={borderRight}
       borderRadius={borderRadius}
       backgroundColor={backgroundColor}
       type={type}
@@ -69,6 +77,10 @@ Input.propTypes = {
   marginRight: PropTypes.number,
   color: PropTypes.string,
   border: PropTypes.object,
+  borderTop: PropTypes.object,
+  borderBottom: PropTypes.object,
+  borderLeft: PropTypes.object,
+  borderRight: PropTypes.object,
   borderRadius: PropTypes.number,
   backgroundColor: PropTypes.string,
   type: PropTypes.string.isRequired,

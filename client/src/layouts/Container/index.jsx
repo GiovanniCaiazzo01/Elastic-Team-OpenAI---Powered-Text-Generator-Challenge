@@ -7,6 +7,11 @@ const Container = ({
   height,
   backgroundColor,
   borderRadius,
+  border,
+  borderTop,
+  borderBottom,
+  borderLeft,
+  borderRight,
   padding,
   paddingLeft,
   paddingRight,
@@ -26,6 +31,11 @@ const Container = ({
       height={height}
       backgroundColor={backgroundColor}
       borderRadius={borderRadius}
+      border={border}
+      borderTop={borderTop}
+      borderBottom={borderBottom}
+      borderLeft={borderLeft}
+      borderRight={borderRight}
       padding={padding}
       paddingLeft={paddingLeft}
       paddingRight={paddingRight}
@@ -50,6 +60,11 @@ Container.propTypes = {
   height: PropTypes.number,
   backgroundColor: PropTypes.string,
   borderRadius: PropTypes.number,
+  border: PropTypes.object,
+  borderTop: PropTypes.object,
+  borderBottom: PropTypes.object,
+  borderLeft: PropTypes.object,
+  borderRight: PropTypes.object,
   padding: PropTypes.number,
   paddingLeft: PropTypes.number,
   paddingRight: PropTypes.number,

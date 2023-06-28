@@ -50,6 +50,36 @@ ${(props) =>
     props.borderRadius &&
     `border-radius: ${props.theme.sizes.px[props.borderRadius]};`}
 
+    ${(props) =>
+    props.border &&
+    `border: solid ${props.theme.sizes.px[props.border.px]} ${
+      props.theme.colors[props.border.color]
+    };`}
+    
+        ${(props) =>
+    props.borderTop &&
+    `border-top: solid ${props.theme.sizes.px[props.borderTop.px]} ${
+      props.theme.colors[props.borderTop.color]
+    };`}
+    
+          ${(props) =>
+    props.borderBottom &&
+    `border-bottom: solid ${props.theme.sizes.px[props.borderBottom.px]} ${
+      props.theme.colors[props.borderBottom.color]
+    };`}
+    
+        ${(props) =>
+    props.borderLeft &&
+    `border-left: solid ${props.theme.sizes.px[props.borderLeft.px]} ${
+      props.theme.colors[props.borderLeft.color]
+    };`}
+    
+        ${(props) =>
+    props.borderRight &&
+    `border-right: solid ${props.theme.sizes.px[props.borderRight.px]} ${
+      props.theme.colors[props.borderRight.color]
+    };`}
+
     //BACKGROND SECTION
     ${(props) =>
     props.backgroundColor &&

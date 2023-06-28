@@ -8,6 +8,7 @@ const Flex = ({
   justifyContent,
   alignItems,
   fullWidth,
+  fullHeight,
   backgroundColor,
   borderRadius,
   padding,
@@ -30,6 +31,7 @@ const Flex = ({
       justifyContent={justifyContent}
       alignItems={alignItems}
       fullWidth={fullWidth}
+      fullHeight={fullHeight}
       backgroundColor={backgroundColor}
       borderRadius={borderRadius}
       padding={padding}
@@ -57,6 +59,7 @@ Flex.propTypes = {
   justifyContent: PropTypes.number,
   alignItems: PropTypes.number,
   fullWidth: PropTypes.bool,
+  fullHeight: PropTypes.bool,
   backgroundColor: PropTypes.string,
   borderRadius: PropTypes.number,
   padding: PropTypes.number,
