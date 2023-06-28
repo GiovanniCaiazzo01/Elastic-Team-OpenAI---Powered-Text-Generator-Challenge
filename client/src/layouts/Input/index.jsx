@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { StyledInput } from "./style";
-
+import { Flex, Img } from "../";
 const Input = ({
   fullWidth,
   width,
@@ -21,31 +21,36 @@ const Input = ({
   borderRadius,
   backgroundColor,
   placeholder,
+  extra,
   type,
 }) => {
   return (
-    <StyledInput
-      fullWidth={fullWidth}
-      width={width}
-      maxWidth={maxWidth}
-      height={height}
-      maxHeight={maxHeight}
-      margin={margin}
-      marginTop={marginTop}
-      marginBottom={marginBottom}
-      marginLeft={marginLeft}
-      marginRight={marginRight}
-      color={color}
-      border={border}
-      borderTop={borderTop}
-      borderBottom={borderBottom}
-      borderLeft={borderLeft}
-      borderRight={borderRight}
-      borderRadius={borderRadius}
-      backgroundColor={backgroundColor}
-      placeholder={placeholder}
-      type={type}
-    />
+    <Flex fullWidth justifyContent={1} alignItems={1}>
+      <StyledInput
+        fullWidth={fullWidth}
+        width={width}
+        maxWidth={maxWidth}
+        height={height}
+        maxHeight={maxHeight}
+        margin={margin}
+        marginTop={marginTop}
+        marginBottom={marginBottom}
+        marginLeft={marginLeft}
+        marginRight={marginRight}
+        color={color}
+        border={border}
+        borderTop={borderTop}
+        borderBottom={borderBottom}
+        borderLeft={borderLeft}
+        borderRight={borderRight}
+        borderRadius={borderRadius}
+        backgroundColor={backgroundColor}
+        placeholder={placeholder}
+        extra={extra}
+        type={type}
+      />
+      <Img src={extra} marginLeft={6} marginRight={7} cursorPointer />
+    </Flex>
   );
 };
 
@@ -70,6 +75,7 @@ Input.propTypes = {
   borderRight: PropTypes.object,
   borderRadius: PropTypes.number,
   backgroundColor: PropTypes.string,
-  placeholder: PropTypes.placeholder,
+  placeholder: PropTypes.string,
+  extra: PropTypes.element,
   type: PropTypes.string.isRequired,
 };

@@ -83,6 +83,7 @@ export const theme = {
       "1.75rem", // 13
       "1.875rem", // 14
       "2rem", // 15
+      "2.125rem", // 16
     ],
   },
   flexAlignment: [

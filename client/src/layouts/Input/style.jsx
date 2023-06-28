@@ -11,7 +11,7 @@ export const StyledInput = styled.input`
     ${(props) =>
     props.maxHeight && `max-height: ${props.theme.sizes.px[props.maxHeight]};`}
     
-  // PADDING SECTIONù
+  // PADDING SECTION
   padding-left: 24px;
   padding-right: 16px;
   padding-top: 15px;
@@ -84,5 +84,11 @@ export const StyledInput = styled.input`
 
   &::placeholder {
     color: ${(props) => props.theme.colors.grey};
+    font-family: ${(props) => props.theme.fonts.tertiary};
+    font-size: ${(props) => props.theme.sizes.rem[6]};
+    line-height: ${(props) => props.theme.sizes.rem[16]};
+  }
+  &:focus {
+    outline: none;
   }
 `;

@@ -5,6 +5,8 @@ export const StyledImg = styled.img`
   ${(props) => props.height && `height: ${props.theme.sizes.px[props.height]};`}
 
 
+  ${(props) => props.cursorPointer && `cursor: pointer;`}
+
   // MARGIN SECTION
   ${(props) => props.margin && `margin: ${props.theme.sizes.px[props.margin]};`}
       ${(props) =>

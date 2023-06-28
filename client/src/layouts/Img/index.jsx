@@ -1,10 +1,5 @@
 import { StyledImg } from "./style";
-import logo_img from "../../assets/img/logo.svg";
 import PropTypes from "prop-types";
-
-const otherImage = {
-  something: "something",
-};
 
 const Img = ({
   src,
@@ -16,12 +11,12 @@ const Img = ({
   marginBottom,
   marginLeft,
   marginRight,
-  isLogo,
+  cursorPointer,
 }) => {
   return (
     <div>
       <StyledImg
-        src={isLogo ? logo_img : otherImage[src]}
+        src={src}
         alt={alt}
         width={width}
         height={height}
@@ -31,6 +26,7 @@ const Img = ({
         marginBottom={marginBottom}
         marginLeft={marginLeft}
         marginRight={marginRight}
+        cursorPointer={cursorPointer}
       />
     </div>
   );
@@ -48,5 +44,5 @@ Img.propTypes = {
   marginBottom: PropTypes.number,
   marginLeft: PropTypes.number,
   marginRight: PropTypes.number,
-  isLogo: PropTypes.bool,
+  cursorPointer: PropTypes.bool,
 };
