@@ -1,11 +1,13 @@
 import { Container, Flex } from "../../../layouts";
-import { ChatMessage } from "./ChatMessage";
+import { ChatIAMessage } from "./ChatIAMessage";
+import { ChatUserMessage } from "./ChatUserMessage";
 
 const ChatSection = () => {
   return (
-    <Container>
+    <Container paddingLeft={11} paddingRight={14}>
       <Flex flexDirection="column" fullHeight>
-        <ChatMessage />;
+        <ChatUserMessage />
+        <ChatIAMessage />
       </Flex>
     </Container>
   );

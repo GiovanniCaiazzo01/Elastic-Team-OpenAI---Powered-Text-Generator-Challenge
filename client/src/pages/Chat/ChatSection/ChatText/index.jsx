@@ -1,4 +1,4 @@
-import { Container, Flex, Text } from "../../../../../layouts";
+import { Container, Flex, Text } from "../../../../layouts";
 
 const ChatText = () => {
   return (
