@@ -11,30 +11,15 @@ export const StyledInput = styled.input`
     ${(props) =>
     props.maxHeight && `max-height: ${props.theme.sizes.px[props.maxHeight]};`}
     
-  // PADDING SECTION
-  ${(props) =>
-    props.padding && `padding: ${props.theme.sizes.px[props.padding]};`}
-    ${(props) =>
-    props.paddingTop &&
-    !props.padding &&
-    `padding-top: ${props.theme.sizes.px[props.paddingTop]};`}
-${(props) =>
-    props.paddingBottom &&
-    !props.padding &&
-    `padding-bottom: ${props.theme.sizes.px[props.paddingBottom]};`}
-${(props) =>
-    props.paddingLeft &&
-    !props.padding &&
-    `padding-left: ${props.theme.sizes.px[props.paddingLeft]};`}
-${(props) =>
-    props.paddingRight &&
-    !props.padding &&
-    `padding-right: ${props.theme.sizes.px[props.paddingRight]};`}
+  // PADDING SECTIONù
+  padding-left: 24px;
+  padding-right: 16px;
+  padding-top: 15px;
+  padding-bottom: 14px;
 
-    // MARGIN SECTION
-    ${(props) =>
-    props.margin && `margin: ${props.theme.sizes.px[props.margin]};`}
-        ${(props) =>
+  // MARGIN SECTION
+  ${(props) => props.margin && `margin: ${props.theme.sizes.px[props.margin]};`}
+  ${(props) =>
     props.marginTop &&
     !props.margin &&
     `margin-top: ${props.theme.sizes.px[props.marginTop]};`}

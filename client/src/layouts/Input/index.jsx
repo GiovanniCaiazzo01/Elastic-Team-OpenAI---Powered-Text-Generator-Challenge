@@ -7,11 +7,6 @@ const Input = ({
   maxWidth,
   height,
   maxHeight,
-  padding,
-  paddingTop,
-  paddingBottom,
-  paddingLeft,
-  paddingRight,
   margin,
   marginTop,
   marginBottom,
@@ -25,6 +20,7 @@ const Input = ({
   borderRight,
   borderRadius,
   backgroundColor,
+  placeholder,
   type,
 }) => {
   return (
@@ -34,11 +30,6 @@ const Input = ({
       maxWidth={maxWidth}
       height={height}
       maxHeight={maxHeight}
-      padding={padding}
-      paddingTop={paddingTop}
-      paddingBottom={paddingBottom}
-      paddingLeft={paddingLeft}
-      paddingRight={paddingRight}
       margin={margin}
       marginTop={marginTop}
       marginBottom={marginBottom}
@@ -52,6 +43,7 @@ const Input = ({
       borderRight={borderRight}
       borderRadius={borderRadius}
       backgroundColor={backgroundColor}
+      placeholder={placeholder}
       type={type}
     />
   );
@@ -65,11 +57,6 @@ Input.propTypes = {
   maxWidth: PropTypes.number,
   height: PropTypes.number,
   maxHeight: PropTypes.number,
-  padding: PropTypes.number,
-  paddingTop: PropTypes.number,
-  paddingBottom: PropTypes.number,
-  paddingLeft: PropTypes.number,
-  paddingRight: PropTypes.number,
   margin: PropTypes.number,
   marginTop: PropTypes.number,
   marginBottom: PropTypes.number,
@@ -83,5 +70,6 @@ Input.propTypes = {
   borderRight: PropTypes.object,
   borderRadius: PropTypes.number,
   backgroundColor: PropTypes.string,
+  placeholder: PropTypes.placeholder,
   type: PropTypes.string.isRequired,
 };
