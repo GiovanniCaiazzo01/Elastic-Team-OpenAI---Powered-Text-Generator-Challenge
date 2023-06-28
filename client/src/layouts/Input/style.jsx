@@ -81,4 +81,8 @@ export const StyledInput = styled.input`
     `background-color: ${props.theme.colors[props.backgroundColor]};`}
 
     box-sizing: border-box;
+
+  &::placeholder {
+    color: ${(props) => props.theme.colors.grey};
+  }
 `;
