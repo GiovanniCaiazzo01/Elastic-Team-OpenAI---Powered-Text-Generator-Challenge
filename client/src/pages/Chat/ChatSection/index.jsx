@@ -4,7 +4,7 @@ import { ChatUserMessage } from "./ChatUserMessage";
 
 const ChatSection = () => {
   return (
-    <Container paddingLeft={11} paddingRight={14}>
+    <Container paddingLeft={11} paddingRight={14} marginTop={20}>
       <Flex flexDirection="column" fullHeight>
         <ChatUserMessage />
         <ChatIAMessage />

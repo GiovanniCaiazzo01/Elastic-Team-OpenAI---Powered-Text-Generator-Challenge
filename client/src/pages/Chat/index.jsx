@@ -1,3 +1,4 @@
+import { ChatFooter } from "./ChatFooter";
 import { ChatHeader } from "./ChatHeader";
 import { ChatSection } from "./ChatSection";
 
@@ -6,6 +7,7 @@ const Chat = () => {
     <>
       <ChatHeader />
       <ChatSection />
+      <ChatFooter />
     </>
   );
 };

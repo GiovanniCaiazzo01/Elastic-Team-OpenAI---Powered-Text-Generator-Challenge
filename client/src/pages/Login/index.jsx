@@ -34,10 +34,10 @@ const Login = () => {
           border={{ px: 0, color: "lightGrey" }}
           borderRadius={1}
           height={23}
-          color="lightGrey"
+          color="linearBlack"
           marginBottom={7}
-          padding={5}
           type="email"
+          placeholder="Your Email Address"
         />
         <Text
           fontFamily="main"
@@ -54,10 +54,10 @@ const Login = () => {
           border={{ px: 0, color: "lightGrey" }}
           borderRadius={1}
           height={23}
-          color="lightGrey"
+          color="linearBlack"
           marginBottom={7}
-          padding={5}
-          Input="password"
+          type="password"
+          placeholder="Your Password"
         />
 
         <Flex fullWidth justifyContent={3} marginTop={19} alignItems={1}>

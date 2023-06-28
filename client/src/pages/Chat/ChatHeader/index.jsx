@@ -7,7 +7,6 @@ const ChatHeader = () => {
       paddingTop={5}
       paddingLeft={8}
       paddingRight={8}
-      marginBottom={20}
       borderBottom={{ px: 0, color: "softGrey" }}
     >
       <LogoWithText

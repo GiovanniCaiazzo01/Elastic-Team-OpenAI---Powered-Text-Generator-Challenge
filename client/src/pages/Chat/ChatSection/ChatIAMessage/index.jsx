@@ -1,4 +1,4 @@
-import { Flex } from "../../../../layouts";
+import { Container, Flex } from "../../../../layouts";
 
 import { Avatar } from "../../../../components";
 import { ChatText } from "../ChatText";
@@ -7,10 +7,12 @@ import { ChatText } from "../ChatText";
 
 const ChatIAMessage = () => {
   return (
-    <Flex justifyContent={0}>
-      <Avatar content="IA" marginRight={7} />
-      <ChatText />
-    </Flex>
+    <Container marginBottom={17}>
+      <Flex justifyContent={0}>
+        <Avatar content="IA" marginRight={7} />
+        <ChatText />
+      </Flex>
+    </Container>
   );
 };
 
