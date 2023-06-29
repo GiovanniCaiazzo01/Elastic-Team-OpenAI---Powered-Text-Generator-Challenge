@@ -24,6 +24,7 @@ const Input = ({
   extra,
   name,
   type,
+  onChange,
 }) => {
   return (
     <Flex fullWidth justifyContent={1} alignItems={1}>
@@ -50,6 +51,7 @@ const Input = ({
         extra={extra}
         name={name}
         type={type}
+        onChange={(e) => onChange(e)}
       />
       <Img src={extra} marginLeft={6} marginRight={7} cursorPointer />
     </Flex>
@@ -81,4 +83,5 @@ Input.propTypes = {
   extra: PropTypes.node,
   name: PropTypes.string,
   type: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
 };
