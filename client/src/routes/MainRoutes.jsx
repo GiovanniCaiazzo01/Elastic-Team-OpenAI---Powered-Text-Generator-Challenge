@@ -1,6 +1,6 @@
 import loadable from "@loadable/component";
 import { Routes, Route } from "react-router-dom";
-import { PublicRoute } from "../components";
+import { PrivateRoute, PublicRoute } from "../components";
 
 const Login = loadable(() => import("../pages/"), {
   resolveComponent: (components) => components.Login,
@@ -27,7 +27,7 @@ const MainRoutes = () => {
         path="/register"
         element={<PublicRoute isCentered component={Register} />}
       />
-      <Route exact path="/chat" element={<PublicRoute component={Chat} />} />
+      <Route exact path="/chat" element={<PrivateRoute component={Chat} />} />
     </Routes>
   );
 };
