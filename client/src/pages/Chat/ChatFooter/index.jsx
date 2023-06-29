@@ -5,6 +5,7 @@ const ChatFooter = () => {
     <Container
       marginLeft={11}
       marginRight={7}
+      marginBottom={11}
       borderRadius={4}
       border={{ px: 0, color: "softGrey" }}
     >

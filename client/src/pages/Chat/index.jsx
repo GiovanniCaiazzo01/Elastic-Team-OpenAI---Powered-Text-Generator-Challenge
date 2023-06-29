@@ -1,3 +1,4 @@
+import { Container, Flex } from "../../layouts";
 import { ChatFooter } from "./ChatFooter";
 import { ChatHeader } from "./ChatHeader";
 import { ChatSection } from "./ChatSection";
@@ -5,9 +6,13 @@ import { ChatSection } from "./ChatSection";
 const Chat = () => {
   return (
     <>
-      <ChatHeader />
-      <ChatSection />
-      <ChatFooter />
+      <Flex fullHeight flexDirection="column" justifyContent={3}>
+        <Container>
+          <ChatHeader />
+          <ChatSection />
+        </Container>
+        <ChatFooter />
+      </Flex>
     </>
   );
 };

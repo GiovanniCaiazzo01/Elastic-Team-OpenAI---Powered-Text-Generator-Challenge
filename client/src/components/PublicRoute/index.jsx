@@ -1,13 +1,15 @@
-import { PageLayout } from "../PageLayout";
+import { CenteredContainer, FullPageContainer } from "../../layouts";
 import PropTypes from "prop-types";
 
 const PublicRoute = ({ isCentered, component: Component }) => {
   return isCentered ? (
-    <PageLayout>
+    <CenteredContainer>
       <Component />
-    </PageLayout>
+    </CenteredContainer>
   ) : (
-    <Component />
+    <FullPageContainer>
+      <Component />
+    </FullPageContainer>
   );
 };
 
