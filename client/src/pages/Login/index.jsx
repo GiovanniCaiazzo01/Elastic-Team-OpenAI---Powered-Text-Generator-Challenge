@@ -37,6 +37,7 @@ const Login = () => {
           color="linearBlack"
           marginBottom={7}
           type="email"
+          name="email"
           placeholder="Your Email Address"
         />
         <Text
@@ -57,6 +58,7 @@ const Login = () => {
           color="linearBlack"
           marginBottom={7}
           type="password"
+          name="password"
           placeholder="Your Password"
         />
 

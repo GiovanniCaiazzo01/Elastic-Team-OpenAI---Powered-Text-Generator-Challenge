@@ -37,6 +37,7 @@ const Register = () => {
           color="linearBlack"
           marginBottom={7}
           type="email"
+          name="email"
           placeholder="Your Username"
         />
         <Text
@@ -57,6 +58,7 @@ const Register = () => {
           color="linearBlack"
           marginBottom={7}
           type="text"
+          name="name"
           placeholder="Your Full Name"
         />
         <Text
@@ -77,6 +79,7 @@ const Register = () => {
           color="linearBlack"
           marginBottom={7}
           type="password"
+          name="password"
           placeholder="Your Password"
         />
         <Flex fullWidth justifyContent={3} marginTop={19} alignItems={1}>

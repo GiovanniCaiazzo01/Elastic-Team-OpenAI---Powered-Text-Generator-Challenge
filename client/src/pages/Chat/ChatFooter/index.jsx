@@ -14,6 +14,7 @@ const ChatFooter = () => {
           fullWidth
           height={24}
           type="text"
+          name="chat-input"
           placeholder="Type yout prompt here..."
           extra={svgIconSax}
         />

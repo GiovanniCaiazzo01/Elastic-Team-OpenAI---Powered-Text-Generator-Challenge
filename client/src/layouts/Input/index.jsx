@@ -22,6 +22,7 @@ const Input = ({
   backgroundColor,
   placeholder,
   extra,
+  name,
   type,
 }) => {
   return (
@@ -47,6 +48,7 @@ const Input = ({
         backgroundColor={backgroundColor}
         placeholder={placeholder}
         extra={extra}
+        name={name}
         type={type}
       />
       <Img src={extra} marginLeft={6} marginRight={7} cursorPointer />
@@ -76,6 +78,7 @@ Input.propTypes = {
   borderRadius: PropTypes.number,
   backgroundColor: PropTypes.string,
   placeholder: PropTypes.string,
-  extra: PropTypes.element,
+  extra: PropTypes.node,
+  name: PropTypes.string,
   type: PropTypes.string.isRequired,
 };
