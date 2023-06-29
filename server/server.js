@@ -2,6 +2,8 @@ import bodyParser from "body-parser";
 import express from "express";
 const app = express();
 import dotEnv from "dotenv";
+import { dbConnection } from "./database/connection.js";
+
 dotEnv.config({ path: "./.env" });
 
 // MIDDLEWARE
@@ -12,10 +14,13 @@ import { UserApi } from "./components/index.js";
 
 // ROUTES MAP
 app.use("/users", UserApi);
-const start = () => {
-  const { PORT } = process.env;
+
+const start = async () => {
+  const { PORT, DB_NAME, DB_URI } = process.env;
+  global.db = await dbConnection(DB_NAME, DB_URI);
+
   app.listen(PORT, () => {
-    console.log(`sono vivo sulla porta ${PORT}`);
+    console.log(`Our server comunication lives on port ${PORT} 📡`);
   });
 };
 
