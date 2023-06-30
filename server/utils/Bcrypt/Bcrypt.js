@@ -1,11 +1,25 @@
 import bcrypt from "bcrypt";
-import dotEnv from "dotenv";
-dotEnv.config({ path: "../.env" });
-
-const { BCRYPT_SALT_ROUND } = process.env;
+import { AppError } from "../Errors/CustomError.js";
+import { commonErrors } from "../Errors/errorManagement.js";
 
 export const hashBcrypt = async (userPassword) => {
-  return await bcrypt.genSalt(BCRYPT_SALT_ROUND, async (err, hash) => {
-    return await hash;
-  });
+  const salt = undefined;
+  if (!(userPassword && salt))
+    throw new AppError(
+      commonErrors.InvalidInput,
+      undefined,
+      "Invalid input: userPassword and salt are required",
+      true
+    );
+  try {
+    const hashedPassword = await bcrypt.hash(userPassword, 10);
+    return hashedPassword;
+  } catch (error) {
+    throw new AppError(
+      commonErrors.HashError,
+      undefined,
+      "Error hashing password: Something went wrong while hasing password",
+      true
+    );
+  }
 };

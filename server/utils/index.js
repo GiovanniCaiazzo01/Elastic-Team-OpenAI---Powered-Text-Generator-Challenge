@@ -1,3 +1,4 @@
+export { commonErrors } from "./Errors/errorManagement.js";
 export { hashBcrypt } from "./Bcrypt/Bcrypt.js";
 export { AppError } from "./Errors/CustomError.js";
 export { decryptJwt } from "./Jwt/jwtUtils.js";
