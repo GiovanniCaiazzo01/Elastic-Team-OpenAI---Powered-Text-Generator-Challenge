@@ -1,6 +1,7 @@
 # Logs
 logs
 *.log
+project_structure.txt
 
 # Dependencies
 node_modules/
