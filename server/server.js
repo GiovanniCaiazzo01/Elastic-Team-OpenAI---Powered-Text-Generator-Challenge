@@ -1,9 +1,8 @@
 import bodyParser from "body-parser";
 import express from "express";
 const app = express();
-import dotEnv from "dotenv";
 import { dbConnection } from "./database/connection.js";
-
+import dotEnv from "dotenv";
 dotEnv.config({ path: "./.env" });
 
 // MIDDLEWARE
