@@ -8,9 +8,9 @@ class AppError extends Error {
     this.isOperational = isOperational;
 
     console.error(
-      `[${this.name}]\ndescription: ${this.description}\nisOperational: ${
-        this.isOperational
-      }\nhttpCode: ${this.httpCode ?? "none"}`
+      `\n\n\n\n\[${this.name}]\ndescription: ${this.description}\nhttpCode: ${
+        this.httpCode ?? "none"
+      }\nisOperational: ${this.isOperational}\nstack trace: ${this.stack}`
     );
   }
 }

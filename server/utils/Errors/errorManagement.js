@@ -11,4 +11,7 @@ export const commonErrors = {
   PermissionDenied: "Permission denied",
   ValidationError: "Validation error",
   HashError: "Error hashing password",
+  UiidError: "Error creating uiid",
+  ShapeError: "Invalid Shape element",
+  InvalidKeyTypes: "Invalid Keys Types",
 };

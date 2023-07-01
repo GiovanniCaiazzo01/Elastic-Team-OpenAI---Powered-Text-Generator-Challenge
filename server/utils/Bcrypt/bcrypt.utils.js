@@ -22,7 +22,7 @@ export const hashBcrypt = async (userPassword) => {
     throw new AppError(
       commonErrors.HashError,
       undefined,
-      "Error hashing password, Something went wrong while hasing password",
+      "Error hashing password, Something went wrong while hashing password",
       true
     );
   }
