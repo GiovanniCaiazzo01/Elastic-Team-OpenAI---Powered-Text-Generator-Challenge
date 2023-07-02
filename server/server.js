@@ -2,11 +2,12 @@ import dotEnv from "dotenv";
 import bodyParser from "body-parser";
 import express from "express";
 const app = express();
+import cors from "cors";
 import { dbConnection } from "./database/connection.js";
 dotEnv.config({ path: "./.env" });
 // MIDDLEWARE
 app.use(bodyParser.json());
-
+app.use(cors());
 // ROUTES IMPORT
 import { UserApi } from "./components/index.js";
 
