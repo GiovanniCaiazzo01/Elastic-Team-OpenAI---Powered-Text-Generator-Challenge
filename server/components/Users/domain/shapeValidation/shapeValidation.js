@@ -8,7 +8,9 @@ export const registerShape = async (user, types) => {
   try {
     await isPlainObject(user);
     await checkObjectValueTypes(user, types);
+    return true;
   } catch (error) {
+    console.log(error);
     throw new AppError(
       error.name,
       error.http,

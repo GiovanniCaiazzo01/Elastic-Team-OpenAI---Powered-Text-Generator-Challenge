@@ -8,22 +8,14 @@ const { BCRYPT_SALT_ROUND } = process.env;
 
 export const hashBcrypt = async (userPassword) => {
   const salt = parseInt(BCRYPT_SALT_ROUND);
-  if (!(userPassword && salt))
+  if (!(userPassword && salt)) {
     throw new AppError(
       commonErrors.InvalidInput,
-      undefined,
+      "none",
       "Invalid input, userPassword and salt are required",
       true
     );
-  try {
-    const hashedPassword = await bcrypt.hash(userPassword, salt);
-    return hashedPassword;
-  } catch (error) {
-    throw new AppError(
-      commonErrors.HashError,
-      undefined,
-      "Error hashing password, Something went wrong while hashing password",
-      true
-    );
   }
+  const hashedPassword = bcrypt.hash(userPassword.trim(), salt);
+  return hashedPassword;
 };

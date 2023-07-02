@@ -2,6 +2,8 @@ export const commonErrors = {
   InvalidInput: "Invalid input provided",
   ResourceNotFound: "Resource not found",
   DatabaseError: "Error accessing the database",
+  DatabaseInsertError: "Error inserting value",
+  DatabaseFindOneError: "Error finding requested item",
   UnauthorizedAccess: "Unauthorized access",
   AuthenticationFailed: "Authentication failed",
   DuplicateEntry: "Duplicate entry",
@@ -11,7 +13,7 @@ export const commonErrors = {
   PermissionDenied: "Permission denied",
   ValidationError: "Validation error",
   HashError: "Error hashing password",
-  UiidError: "Error creating uiid",
+  UuidvError: "Error creating UuidvError",
   ShapeError: "Invalid Shape element",
   InvalidKeyTypes: "Invalid Keys Types",
 };

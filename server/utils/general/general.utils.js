@@ -19,7 +19,6 @@ export const checkObjectValueTypes = async (obj, types) => {
   return await new Promise((resolve, reject) => {
     for (const key in types) {
       if (obj.hasOwnProperty(key)) {
-        console.log(typeof obj[key], types[key]);
         if (typeof obj[key] !== types[key]) {
           reject({
             name: commonErrors.InvalidKeyTypes,
