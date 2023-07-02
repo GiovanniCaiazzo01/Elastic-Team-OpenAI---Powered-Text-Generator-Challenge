@@ -19,7 +19,6 @@ const Button = ({
   onClick,
   children,
 }) => {
-  console.log(disabled);
   return (
     <StyledButton
       color={color}
