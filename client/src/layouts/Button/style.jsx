@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 export const StyledButton = styled.button`
   cursor: pointer;
+  ${(props) =>
+    props.disabled &&
+    `
+  opacity: 50%;
+  pointer-events: none;`}
   // PADDING SECTION
   ${(props) =>
     props.padding && `padding: ${props.theme.sizes.px[props.padding]};`}

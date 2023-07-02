@@ -1,6 +1,22 @@
+import { useState } from "react";
 import { LogoWithText } from "../../components";
 import { Button, Container, Flex, Input, Text, Link } from "../../layouts";
+import HTTPClient from "../../api/HTTPClient";
+
 const Register = () => {
+  const [userCredentials, setUserCredentials] = useState({
+    fullName: "",
+    email: "",
+    password: "",
+  });
+
+  const onUserInput = (e) => {
+    return setUserCredentials((prev) => ({ ...prev, [e.name]: e.value }));
+  };
+
+  const onSubmit = async () => {
+    return await HTTPClient.post("users/register", undefined, userCredentials);
+  };
   return (
     <Container padding={4} width={503} maxWidth={503}>
       <Flex flexDirection="column">
@@ -39,6 +55,7 @@ const Register = () => {
           type="email"
           name="email"
           placeholder="Your Username"
+          onChange={(e) => onUserInput(e.target)}
         />
         <Text
           fontFamily="main"
@@ -58,8 +75,9 @@ const Register = () => {
           color="linearBlack"
           marginBottom={7}
           type="text"
-          name="name"
+          name="fullName"
           placeholder="Your Full Name"
+          onChange={(e) => onUserInput(e.target)}
         />
         <Text
           fontFamily="main"
@@ -81,6 +99,7 @@ const Register = () => {
           type="password"
           name="password"
           placeholder="Your Password"
+          onChange={(e) => onUserInput(e.target)}
         />
         <Flex fullWidth justifyContent={3} marginTop={19} alignItems={1}>
           <Button
@@ -90,6 +109,14 @@ const Register = () => {
             paddingTop={3}
             paddingBottom={3}
             borderRadius={3}
+            disabled={
+              userCredentials.fullName &&
+              userCredentials.email &&
+              userCredentials.password
+                ? false
+                : true
+            }
+            onClick={() => onSubmit()}
           >
             <Text
               color="white"

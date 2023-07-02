@@ -15,8 +15,11 @@ const Button = ({
   marginRight,
   marginTop,
   marginBottom,
+  disabled,
+  onClick,
   children,
 }) => {
+  console.log(disabled);
   return (
     <StyledButton
       color={color}
@@ -32,6 +35,8 @@ const Button = ({
       marginRight={marginRight}
       marginTop={marginTop}
       marginBottom={marginBottom}
+      disabled={disabled}
+      onClick={(e) => onClick(e)}
     >
       {children}
     </StyledButton>
@@ -54,5 +59,7 @@ Button.propTypes = {
   marginRight: PropTypes.number,
   marginTop: PropTypes.number,
   marginBottom: PropTypes.number,
+  onClick: PropTypes.func,
+  disabled: PropTypes.bool,
   children: PropTypes.node.isRequired,
 };
