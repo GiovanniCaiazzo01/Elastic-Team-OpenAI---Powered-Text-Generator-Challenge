@@ -82,6 +82,12 @@ export const StyledInput = styled.input`
 
     box-sizing: border-box;
 
+  ${(props) =>
+    props.invalidInput &&
+    `
+    color: red;
+    border-color: red;`}
+
   &::placeholder {
     color: ${(props) => props.theme.colors.grey};
     font-family: ${(props) => props.theme.fonts.tertiary};

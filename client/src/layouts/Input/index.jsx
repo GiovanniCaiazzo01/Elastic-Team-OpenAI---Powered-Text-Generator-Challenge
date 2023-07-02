@@ -24,6 +24,7 @@ const Input = ({
   extra,
   name,
   type,
+  invalidInput,
   onChange,
 }) => {
   return (
@@ -51,6 +52,7 @@ const Input = ({
         extra={extra}
         name={name}
         type={type}
+        invalidInput={invalidInput}
         onChange={(e) => onChange(e)}
       />
       <Img src={extra} marginLeft={6} marginRight={7} cursorPointer />
@@ -83,5 +85,6 @@ Input.propTypes = {
   extra: PropTypes.node,
   name: PropTypes.string,
   type: PropTypes.string.isRequired,
+  invalidInput: PropTypes.bool,
   onChange: PropTypes.func,
 };
