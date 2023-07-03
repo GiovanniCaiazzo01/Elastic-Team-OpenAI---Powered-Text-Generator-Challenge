@@ -1,3 +1,4 @@
+export { InputWithText } from "./InputWithText";
 export { Avatar } from "./Avatar";
 export { LogoWithText } from "./LogoWithText";
 export { Logo } from "./Logo";
