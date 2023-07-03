@@ -1,6 +1,28 @@
-import { LogoWithText } from "../../components";
+import { useState } from "react";
+import { InputWithText, LogoWithText } from "../../components";
 import { Button, Container, Flex, Input, Text, Link } from "../../layouts";
+import { useNavigate } from "react-router-dom";
+import HTTPClient from "../../api/HTTPClient";
 const Login = () => {
+  const [invalidInput, setInvalidInput] = useState(false);
+  const [userCredentials, setUserCredentials] = useState({
+    email: "",
+    password: "",
+  });
+
+  const navigate = useNavigate();
+
+  const onUserInput = (e) => {
+    invalidInput && setInvalidInput(() => false);
+    return setUserCredentials((prev) => ({ ...prev, [e.name]: e.value }));
+  };
+
+  const onSubmit = async () => {
+    await HTTPClient.post("users/login", undefined, userCredentials).then(
+      (response) =>
+        !response.result ? setInvalidInput(() => true) : navigate("/chat")
+    );
+  };
   return (
     <Container padding={4} width={503} maxWidth={503}>
       <Flex flexDirection="column">
@@ -19,49 +41,22 @@ const Login = () => {
         >
           Please log in to continue
         </Text>
-        <Text
-          fontFamily="main"
-          color="darkGrey"
-          fontWeight={3}
-          fontSize={7}
-          lineHeight={13}
-          marginBottom={7}
-        >
-          Email Address
-        </Text>
-        <Input
-          fullWidth
-          border={{ px: 0, color: "lightGrey" }}
-          borderRadius={1}
-          height={23}
-          color="linearBlack"
-          marginBottom={7}
-          type="email"
-          name="email"
-          placeholder="Your Email Address"
-        />
-        <Text
-          fontFamily="main"
-          color="darkGrey"
-          fontWeight={3}
-          fontSize={7}
-          lineHeight={13}
-          marginBottom={7}
-        >
-          Password
-        </Text>
-        <Input
-          fullWidth
-          border={{ px: 0, color: "lightGrey" }}
-          borderRadius={1}
-          height={23}
-          color="linearBlack"
-          marginBottom={7}
-          type="password"
-          name="password"
-          placeholder="Your Password"
+        <InputWithText
+          inputType="email"
+          inputName="email"
+          inputPlaceholder="Your Email Address"
+          textLabel="Email Address"
+          onChange={(e) => onUserInput(e)}
+          invalidInput={invalidInput}
         />
 
+        <InputWithText
+          inputType="password"
+          inputName="password"
+          inputPlaceholder="Your Password"
+          textLabel="Password"
+          onChange={(e) => onUserInput(e)}
+        />
         <Flex fullWidth justifyContent={3} marginTop={19} alignItems={1}>
           <Button
             backgroundColor="brandGreen"
@@ -70,6 +65,10 @@ const Login = () => {
             paddingTop={3}
             paddingBottom={3}
             borderRadius={3}
+            disabled={
+              userCredentials.email && userCredentials.password ? false : true
+            }
+            onClick={() => onSubmit()}
           >
             <Text
               color="white"
