@@ -1,27 +1,23 @@
 import { decryptBcrypt } from "../../../utils/Bcrypt/bcrypt.utils.js";
-import { Result } from "../../../utils/index.js";
-import { registerShape } from "../../Users/domain/shapeValidation/shapeValidation.js";
+import { Result, objShapeValidation } from "../../../utils/index.js";
 import { getUserByEmail } from "../data-access/authUser.repository.js";
 export const login = async (user) => {
   const { email, password } = user;
 
   if (!(email && password)) return new Result(false, "metti tutti i fields");
 
-  //   email = email.trim();
-  //   password = password.trim();
-
   const userPayload = {
     email,
     password,
   };
 
-  const types = {
+  const TYPES = {
     email: "string",
     password: "string",
   };
 
   try {
-    await registerShape(userPayload, types);
+    await objShapeValidation(userPayload, TYPES);
     const raw_user = await getUserByEmail(email);
 
     if (!raw_user) {

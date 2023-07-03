@@ -1,5 +1,5 @@
+import { AppError } from "../Errors/CustomError.js";
 import { commonErrors } from "../Errors/errorManagement.js";
-
 export const isPlainObject = async (obj) => {
   return await new Promise((resolve, reject) => {
     const result =
@@ -33,4 +33,19 @@ export const checkObjectValueTypes = async (obj, types) => {
     }
     resolve(true);
   });
+};
+
+export const objShapeValidation = async (user, types) => {
+  try {
+    await isPlainObject(user);
+    await checkObjectValueTypes(user, types);
+    return true;
+  } catch (error) {
+    throw new AppError(
+      error.name,
+      error.http,
+      error.description,
+      error.isOperational
+    );
+  }
 };

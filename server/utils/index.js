@@ -6,4 +6,5 @@ export { Result } from "./Result/Result.js";
 export {
   isPlainObject,
   checkObjectValueTypes,
+  objShapeValidation,
 } from "./general/general.utils.js";
