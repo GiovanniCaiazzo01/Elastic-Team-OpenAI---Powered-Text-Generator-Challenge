@@ -2,20 +2,35 @@ import { useState } from "react";
 import { LogoWithText } from "../../components";
 import { Button, Container, Flex, Input, Text, Link } from "../../layouts";
 import HTTPClient from "../../api/HTTPClient";
-
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 const Register = () => {
+  const [invalidInput, setInvalidInput] = useState(false);
   const [userCredentials, setUserCredentials] = useState({
     fullName: "",
     email: "",
     password: "",
   });
 
+  const navigate = useNavigate();
+
   const onUserInput = (e) => {
+    invalidInput && setInvalidInput(() => false);
     return setUserCredentials((prev) => ({ ...prev, [e.name]: e.value }));
   };
 
   const onSubmit = async () => {
-    return await HTTPClient.post("users/register", undefined, userCredentials);
+    const regex = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
+    const isValidEmail = regex.test(userCredentials.email);
+
+    if (!isValidEmail) {
+      toast.error("Please, provide a valid email");
+      return setInvalidInput(() => true);
+    }
+
+    await HTTPClient.post("users/register", undefined, userCredentials).then(
+      (response) => response.result && navigate("/login")
+    );
   };
   return (
     <Container padding={4} width={503} maxWidth={503}>
@@ -55,6 +70,7 @@ const Register = () => {
           type="email"
           name="email"
           placeholder="Your Username"
+          invalidInput={invalidInput}
           onChange={(e) => onUserInput(e.target)}
         />
         <Text
