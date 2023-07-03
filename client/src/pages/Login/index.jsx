@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { InputWithText, LogoWithText } from "../../components";
-import { Button, Container, Flex, Input, Text, Link } from "../../layouts";
+import { Button, Container, Flex, Text, Link } from "../../layouts";
 import { useNavigate } from "react-router-dom";
 import HTTPClient from "../../api/HTTPClient";
 const Login = () => {
