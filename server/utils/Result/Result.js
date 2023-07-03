@@ -1,7 +1,7 @@
 class Result {
-  constructor(result, description, data) {
+  constructor(result, message, data) {
     this.result = result;
-    this.description = description;
+    this.message = message;
     this.data = data;
   }
 }

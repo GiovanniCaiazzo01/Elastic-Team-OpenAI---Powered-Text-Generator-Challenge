@@ -13,14 +13,14 @@ const { MISSING_FIELDS, REGISTRATION_FAILED, DUPLICATE_EMAIL, GENERAL_ERROR } =
 const { REGISTRATION_SUCCESS } = SUCCESS;
 import dayjs from "dayjs";
 
-export const register = async ({ email, name, password }) => {
-  name = name.trim();
-  email = email.trim();
-  password = password.trim();
-
-  if (!(email && name && password)) {
+export const register = async ({ email, fullName, password }) => {
+  if (!(email && fullName && password)) {
     return new Result(false, MISSING_FIELDS);
   }
+
+  fullName = fullName.trim();
+  email = email.trim();
+  password = password.trim();
 
   try {
     // fatto
@@ -32,7 +32,7 @@ export const register = async ({ email, name, password }) => {
     const ucode = await generateUID();
 
     const user = {
-      name,
+      fullName,
       email,
       password: hashedPassword,
       ucode,
@@ -40,7 +40,7 @@ export const register = async ({ email, name, password }) => {
     };
 
     const types = {
-      name: "string",
+      fullName: "string",
       email: "string",
       password: "string",
       ucode: "string",

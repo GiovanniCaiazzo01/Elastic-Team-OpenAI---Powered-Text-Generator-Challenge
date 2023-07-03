@@ -16,6 +16,6 @@ export const hashBcrypt = async (userPassword) => {
       true
     );
   }
-  const hashedPassword = bcrypt.hash(userPassword.trim(), salt);
+  const hashedPassword = bcrypt.hash(userPassword, salt);
   return hashedPassword;
 };
