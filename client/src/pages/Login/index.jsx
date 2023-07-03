@@ -18,7 +18,7 @@ const Login = () => {
   };
 
   const onSubmit = async () => {
-    await HTTPClient.post("users/login", undefined, userCredentials).then(
+    await HTTPClient.post("auth/login", undefined, userCredentials).then(
       (response) =>
         !response.result ? setInvalidInput(() => true) : navigate("/chat")
     );
@@ -46,8 +46,8 @@ const Login = () => {
           inputName="email"
           inputPlaceholder="Your Email Address"
           textLabel="Email Address"
-          onChange={(e) => onUserInput(e)}
           invalidInput={invalidInput}
+          onChange={(e) => onUserInput(e)}
         />
 
         <InputWithText
@@ -55,6 +55,7 @@ const Login = () => {
           inputName="password"
           inputPlaceholder="Your Password"
           textLabel="Password"
+          invalidInput={invalidInput}
           onChange={(e) => onUserInput(e)}
         />
         <Flex fullWidth justifyContent={3} marginTop={19} alignItems={1}>

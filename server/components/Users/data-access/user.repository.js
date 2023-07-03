@@ -16,10 +16,10 @@ export const addUser = async (userData) => {
   }
 };
 
-export const checkDuplicatedUser = async (email) => {
+export const getUserByEmail = async (email) => {
   try {
-    const isDuplicated = await global.db.collection(USERS).findOne({ email });
-    return isDuplicated ? true : false;
+    const user = await global.db.collection(USERS).findOne({ email });
+    return user ? true : false;
   } catch (error) {
     throw new AppError(
       commonErrors.DatabaseFindOneError,

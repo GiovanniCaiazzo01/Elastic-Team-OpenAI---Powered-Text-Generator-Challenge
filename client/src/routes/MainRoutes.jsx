@@ -1,5 +1,5 @@
 import loadable from "@loadable/component";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { PrivateRoute, PublicRoute } from "../components";
 
 const Login = loadable(() => import("../pages/"), {
@@ -17,6 +17,7 @@ const Chat = loadable(() => import("../pages/"), {
 const MainRoutes = () => {
   return (
     <Routes>
+      <Route exact path="/" element={<Navigate to="/login" replace />} />
       <Route
         exact
         path="/login"

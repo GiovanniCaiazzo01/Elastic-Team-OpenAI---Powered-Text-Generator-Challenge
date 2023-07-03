@@ -1,10 +1,7 @@
 import { Result } from "../../../utils/Result/Result.js";
 import { hashBcrypt } from "../../../utils/index.js";
 import { generateUID } from "../../../utils/uiid/uiid.utils.js";
-import {
-  addUser,
-  checkDuplicatedUser,
-} from "../data-access/user.repository.js";
+import { addUser, getUserByEmail } from "../data-access/user.repository.js";
 import { ERRORS } from "./errorMessages.js";
 import { registerShape } from "./shapeValidation/shapeValidation.js";
 import { SUCCESS } from "./successMessages.js";
@@ -13,7 +10,9 @@ const { MISSING_FIELDS, REGISTRATION_FAILED, DUPLICATE_EMAIL, GENERAL_ERROR } =
 const { REGISTRATION_SUCCESS } = SUCCESS;
 import dayjs from "dayjs";
 
-export const register = async ({ email, fullName, password }) => {
+export const register = async (user) => {
+  const { email, fullName, password } = user;
+
   if (!(email && fullName && password)) {
     return new Result(false, MISSING_FIELDS);
   }
@@ -23,23 +22,15 @@ export const register = async ({ email, fullName, password }) => {
   password = password.trim();
 
   try {
-    // fatto
-    const isDuplicated = await checkDuplicatedUser(email);
-    if (isDuplicated) return new Result(false, DUPLICATE_EMAIL);
-    //fatto
-    const hashedPassword = await hashBcrypt(password);
-    // fatto
-    const ucode = await generateUID();
-
-    const user = {
+    const userPayload = {
       fullName,
       email,
-      password: hashedPassword,
+      password,
       ucode,
       sign_up_date: dayjs().format("YYYY-MM-DD"),
     };
 
-    const types = {
+    const TYPES = {
       fullName: "string",
       email: "string",
       password: "string",
@@ -47,9 +38,15 @@ export const register = async ({ email, fullName, password }) => {
       sign_up_date: "string",
     };
 
-    await registerShape(user, types);
+    await registerShape(userPayload, TYPES);
 
-    const addResult = await addUser(user);
+    const isDuplicated = await getUserByEmail(email);
+    if (isDuplicated) return new Result(false, DUPLICATE_EMAIL);
+    const hashedPassword = await hashBcrypt(password);
+    userPayload.password = hashedPassword;
+    const ucode = await generateUID();
+
+    const addResult = await addUser(userPayload);
 
     return addResult
       ? new Result(true, REGISTRATION_SUCCESS)

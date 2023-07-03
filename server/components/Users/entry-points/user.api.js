@@ -5,8 +5,14 @@ const router = Router();
 
 router.post("/register", async (req, res) => {
   const { email, fullName, password } = req.body;
-  const result = await register({ email, fullName, password });
+
+  const payload = {
+    email,
+    fullName,
+    password,
+  };
+  const result = await register(payload);
   return res.send(result);
 });
 
-export { router as UserApi };
+export { router as userApi };
