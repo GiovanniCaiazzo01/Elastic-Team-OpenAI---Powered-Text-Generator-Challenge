@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { LogoWithText } from "../../components";
-import { Button, Container, Flex, Input, Text, Link } from "../../layouts";
+import { InputWithText, LogoWithText } from "../../components";
+import { Button, Container, Flex, Text, Link } from "../../layouts";
 import HTTPClient from "../../api/HTTPClient";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+
 const Register = () => {
   const [invalidInput, setInvalidInput] = useState(false);
   const [userCredentials, setUserCredentials] = useState({
@@ -32,6 +33,7 @@ const Register = () => {
       (response) => response.result && navigate("/login")
     );
   };
+
   return (
     <Container padding={4} width={503} maxWidth={503}>
       <Flex flexDirection="column">
@@ -50,73 +52,32 @@ const Register = () => {
         >
           Sign up
         </Text>
-        <Text
-          fontFamily="main"
-          color="darkGrey"
-          fontWeight={3}
-          fontSize={7}
-          lineHeight={13}
-          marginBottom={7}
-        >
-          Email Address
-        </Text>
-        <Input
-          fullWidth
-          border={{ px: 0, color: "lightGrey" }}
-          borderRadius={1}
-          height={23}
-          color="linearBlack"
-          marginBottom={7}
-          type="email"
-          name="email"
-          placeholder="Your Username"
+
+        <InputWithText
+          inputType="email"
+          inputName="email"
+          inputPlaceholder="Your Email Address"
+          textLabel="Email Address"
+          onChange={(e) => onUserInput(e)}
           invalidInput={invalidInput}
-          onChange={(e) => onUserInput(e.target)}
         />
-        <Text
-          fontFamily="main"
-          color="darkGrey"
-          fontWeight={3}
-          fontSize={7}
-          lineHeight={13}
-          marginBottom={7}
-        >
-          Full Name
-        </Text>
-        <Input
-          fullWidth
-          border={{ px: 0, color: "lightGrey" }}
-          borderRadius={1}
-          height={23}
-          color="linearBlack"
-          marginBottom={7}
-          type="text"
-          name="fullName"
-          placeholder="Your Full Name"
-          onChange={(e) => onUserInput(e.target)}
+
+        <InputWithText
+          inputType="text"
+          inputName="fullName"
+          inputPlaceholder="Your Full Name"
+          textLabel="Full Name"
+          onChange={(e) => onUserInput(e)}
         />
-        <Text
-          fontFamily="main"
-          color="darkGrey"
-          fontWeight={3}
-          fontSize={7}
-          lineHeight={13}
-          marginBottom={7}
-        >
-          Password
-        </Text>
-        <Input
-          fullWidth
-          border={{ px: 0, color: "lightGrey" }}
-          borderRadius={1}
-          height={23}
-          color="linearBlack"
-          marginBottom={7}
-          type="password"
-          name="password"
-          placeholder="Your Password"
-          onChange={(e) => onUserInput(e.target)}
+
+        <InputWithText
+          inputType="password"
+          inputName="password"
+          inputPlaceholder="Your Password"
+          textLabel="Password"
+          onChange={(e) => onUserInput(e)}
         />
+
         <Flex fullWidth justifyContent={3} marginTop={19} alignItems={1}>
           <Button
             backgroundColor="brandGreen"
