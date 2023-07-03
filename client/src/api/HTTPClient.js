@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 const BASE_URL = import.meta.env.VITE_REACT_APP_BASE_URL_API;
 const PROMISE_MESSAGE =
   "Hang tight! We're working our magic to process your request. 🧙‍♂️✨";
+
 const HTTPClient = {
   get: async (url, params) => {
     const id = toast.loading(PROMISE_MESSAGE);
@@ -11,10 +12,20 @@ const HTTPClient = {
       (response) => response.json()
     );
 
+    response.result
+      ? (response.message += " 🌟✨")
+      : (response.message += " 🙀💔");
+
     toast.update(id, {
       render: response.message,
       type: response.result ? "success" : "error",
       isLoading: false,
+      autoClose: true,
+      hideProgressBar: false,
+      draggable: true,
+      closeOnClick: true,
+      closeButton: true,
+      pauseOnHover: true,
     });
 
     return response;
@@ -30,10 +41,20 @@ const HTTPClient = {
       body: JSON.stringify(body),
     }).then((response) => response.json());
 
+    response.result
+      ? (response.message += " 🌟✨")
+      : (response.message += " 🙀💔");
+
     toast.update(id, {
       render: response.message,
       type: response.result ? "success" : "error",
       isLoading: false,
+      autoClose: true,
+      hideProgressBar: false,
+      draggable: true,
+      closeOnClick: true,
+      closeButton: true,
+      pauseOnHover: true,
     });
 
     return response;
@@ -50,10 +71,20 @@ const HTTPClient = {
       body: JSON.stringify(body),
     }).then((response) => response.json());
 
+    response.result
+      ? (response.message += " 🌟✨")
+      : (response.message += " 🙀💔");
+
     toast.update(id, {
       render: response.message,
       type: response.result ? "success" : "error",
       isLoading: false,
+      autoClose: true,
+      hideProgressBar: false,
+      draggable: true,
+      closeOnClick: true,
+      closeButton: true,
+      pauseOnHover: true,
     });
 
     return response;
@@ -66,10 +97,20 @@ const HTTPClient = {
       method: "DELETE",
     }).then((response) => response.json());
 
+    response.result
+      ? (response.message += " 🌟✨")
+      : (response.message += " 🙀💔");
+
     toast.update(id, {
       render: response.message,
       type: response.result ? "success" : "error",
       isLoading: false,
+      autoClose: true,
+      hideProgressBar: false,
+      draggable: true,
+      closeOnClick: true,
+      closeButton: true,
+      pauseOnHover: true,
     });
 
     return response;
