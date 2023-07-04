@@ -7,10 +7,8 @@ dotEnv.config({ path: "./.env" });
 
 const { JWT_SECRET } = process.env;
 
-export const verifyJwt = async (jwtToken, data) => {
+export const verifyJwt = async (jwtToken) => {
   try {
-    // quando il token è expired solleva un eccezzione, va fatto una callback nel verify
-    // e se il token è expired richiamre makeJwt e creare il token per poi restiturirlo
     return jwt.verify(jwtToken, JWT_SECRET, function (err, decoded) {
       if (err?.name === "TokenExpiredError") {
         return false;
@@ -23,8 +21,11 @@ export const verifyJwt = async (jwtToken, data) => {
 };
 
 export const makeJwt = async (data) => {
+  const { fullName, ucode, email } = data;
   try {
-    return jwt.sign(data, JWT_SECRET, { expiresIn: "30s" });
+    return jwt.sign({ fullName, ucode, email }, JWT_SECRET, {
+      expiresIn: "30s",
+    });
   } catch (error) {
     throw new AppError(
       commonErrors.JwtError,
