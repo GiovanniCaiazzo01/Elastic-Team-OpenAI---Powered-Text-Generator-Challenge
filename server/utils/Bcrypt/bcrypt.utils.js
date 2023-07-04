@@ -30,6 +30,5 @@ export const decryptBcrypt = async (incomingString, hashedString) => {
     );
   }
   const isValid = await bcrypt.compare(incomingString, hashedString);
-  console.log(isValid);
   return isValid;
 };

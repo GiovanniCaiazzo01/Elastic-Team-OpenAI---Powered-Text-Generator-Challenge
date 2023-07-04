@@ -4,6 +4,7 @@ export const commonErrors = {
   DatabaseError: "Error accessing the database",
   DatabaseInsertError: "Error inserting value",
   DatabaseFindOneError: "Error finding requested item",
+  DatabaseUpdateOneError: "Error update document",
   UnauthorizedAccess: "Unauthorized access",
   AuthenticationFailed: "Authentication failed",
   DuplicateEntry: "Duplicate entry",
@@ -16,4 +17,5 @@ export const commonErrors = {
   UuidvError: "Error creating UuidvError",
   ShapeError: "Invalid Shape element",
   InvalidKeyTypes: "Invalid Keys Types",
+  JwtError: "Error sign jwt token",
 };
