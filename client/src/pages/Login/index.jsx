@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { InputWithText, LogoWithText } from "../../components";
 import { Button, Container, Flex, Text, Link } from "../../layouts";
-import { useNavigate } from "react-router-dom";
+
 import HTTPClient from "../../api/HTTPClient";
+import { useAuth } from "../../hooks";
+import { useNavigate } from "react-router-dom";
+
 const Login = () => {
   const [invalidInput, setInvalidInput] = useState(false);
   const [userCredentials, setUserCredentials] = useState({
@@ -11,6 +14,7 @@ const Login = () => {
   });
 
   const navigate = useNavigate();
+  const { setAuthToken } = useAuth();
 
   const onUserInput = (e) => {
     invalidInput && setInvalidInput(() => false);
@@ -18,10 +22,15 @@ const Login = () => {
   };
 
   const onSubmit = async () => {
-    await HTTPClient.post("auth/login", undefined, userCredentials).then(
-      (response) =>
-        !response.result ? setInvalidInput(() => true) : navigate("/chat")
+    const userLogin = await HTTPClient.post(
+      "auth/login",
+      undefined,
+      userCredentials
     );
+
+    !userLogin.result && setInvalidInput(() => true);
+    await setAuthToken(userLogin.data.jwt_token);
+    return navigate("/chat");
   };
   return (
     <Container padding={4} width={503} maxWidth={503}>

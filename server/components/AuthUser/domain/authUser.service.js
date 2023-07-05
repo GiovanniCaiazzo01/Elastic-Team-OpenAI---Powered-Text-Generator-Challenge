@@ -1,9 +1,8 @@
 import { decryptBcrypt } from "../../../utils/Bcrypt/bcrypt.utils.js";
-import { makeJwt, verifyJwt } from "../../../utils/Jwt/jwt.utils.js";
+import { verifyJwt } from "../../../utils/Jwt/jwt.utils.js";
 import { Result, objShapeValidation } from "../../../utils/index.js";
 import {
   getUserByEmail,
-  updateUserData,
   updateUserToken,
 } from "../data-access/authUser.repository.js";
 

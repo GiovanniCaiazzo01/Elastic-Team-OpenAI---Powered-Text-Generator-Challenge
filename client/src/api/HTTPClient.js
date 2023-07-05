@@ -115,5 +115,19 @@ const HTTPClient = {
 
     return response;
   },
+  verifyToken: async (token) => {
+    const headers = {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    };
+
+    const response = await fetch(`${BASE_URL}auth/verify-token`, {
+      method: "GET",
+      headers,
+    }).then((response) => response.json());
+
+    return response;
+  },
 };
+
 export default HTTPClient;

@@ -5,6 +5,7 @@ const app = express();
 import cors from "cors";
 import { dbConnection } from "./database/connection.js";
 dotEnv.config({ path: "./.env" });
+
 // MIDDLEWARE
 app.use(bodyParser.json());
 app.use(cors());
