@@ -4,13 +4,13 @@ import { Avatar } from "../../../../components";
 
 import { ChatText } from "../ChatText";
 
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
-const ChatUserMessage = () => {
+const ChatUserMessage = ({ userMessage }) => {
   return (
     <Container marginBottom={17}>
       <Flex justifyContent={2}>
-        <ChatText />
+        <ChatText textMessage={userMessage} />
         <Avatar content="GC" marginLeft={7} />
       </Flex>
     </Container>
@@ -20,5 +20,5 @@ const ChatUserMessage = () => {
 export { ChatUserMessage };
 
 ChatUserMessage.propTypes = {
-  // origin: PropTypes.string,
+  userMessage: PropTypes.string,
 };

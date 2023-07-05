@@ -1,6 +1,8 @@
 import { Container, Flex, Text } from "../../../../layouts";
+import PropTypes from "prop-types";
 
-const ChatText = () => {
+const ChatText = ({ textMessage }) => {
+  console.log("cosa mi arriva", textMessage);
   return (
     <Container
       backgroundColor="whiteGrey"
@@ -18,7 +20,7 @@ const ChatText = () => {
           lineHeight={10}
           color="linearBlack"
         >
-          wewe
+          {textMessage}
         </Text>
       </Flex>
     </Container>
@@ -26,3 +28,6 @@ const ChatText = () => {
 };
 
 export { ChatText };
+ChatText.propTypes = {
+  textMessage: PropTypes.string,
+};

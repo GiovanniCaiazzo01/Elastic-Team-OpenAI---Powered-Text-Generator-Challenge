@@ -37,6 +37,7 @@ const HTTPClient = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Accept: "application/json",
       },
       body: JSON.stringify(body),
     }).then((response) => response.json());
@@ -67,6 +68,7 @@ const HTTPClient = {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
+        Accept: "application/json",
       },
       body: JSON.stringify(body),
     }).then((response) => response.json());

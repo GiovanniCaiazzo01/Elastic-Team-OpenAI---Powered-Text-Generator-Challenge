@@ -3,14 +3,14 @@ import { Container, Flex } from "../../../../layouts";
 import { Avatar } from "../../../../components";
 import { ChatText } from "../ChatText";
 
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
-const ChatIAMessage = () => {
+const ChatIAMessage = ({ iaMessage }) => {
   return (
     <Container marginBottom={17}>
       <Flex justifyContent={0}>
         <Avatar content="IA" marginRight={7} />
-        <ChatText />
+        <ChatText textMessage={iaMessage} />
       </Flex>
     </Container>
   );
@@ -19,5 +19,5 @@ const ChatIAMessage = () => {
 export { ChatIAMessage };
 
 ChatIAMessage.propTypes = {
-  // origin: PropTypes.string,
+  iaMessage: PropTypes.string,
 };

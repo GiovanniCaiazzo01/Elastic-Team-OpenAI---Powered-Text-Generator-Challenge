@@ -35,10 +35,10 @@ export const checkObjectValueTypes = async (obj, types) => {
   });
 };
 
-export const objShapeValidation = async (user, types) => {
+export const objShapeValidation = async (obj, types) => {
   try {
-    await isPlainObject(user);
-    await checkObjectValueTypes(user, types);
+    await isPlainObject(obj);
+    await checkObjectValueTypes(obj, types);
     return true;
   } catch (error) {
     throw new AppError(

@@ -1,4 +1,4 @@
-import dotEnv, { decrypt } from "dotenv";
+import dotEnv from "dotenv";
 import bcrypt from "bcrypt";
 import { AppError } from "../Errors/CustomError.js";
 import { commonErrors } from "../Errors/errorManagement.js";

@@ -10,11 +10,12 @@ dotEnv.config({ path: "./.env" });
 app.use(bodyParser.json());
 app.use(cors());
 // ROUTES IMPORT
-import { userApi, authApi } from "./components/index.js";
+import { userApi, authApi, chatApi } from "./components/index.js";
 
 // ROUTES MAP
 app.use("/users", userApi);
 app.use("/auth", authApi);
+app.use("/chat", chatApi);
 
 const start = async () => {
   // process.on("unhandledRejection", (reason, p) => {

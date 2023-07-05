@@ -26,6 +26,7 @@ const Input = ({
   type,
   invalidInput,
   onChange,
+  onSubmit,
 }) => {
   return (
     <Flex fullWidth justifyContent={1} alignItems={1}>
@@ -54,6 +55,7 @@ const Input = ({
         type={type}
         invalidInput={invalidInput}
         onChange={(e) => onChange(e)}
+        onSubmit={(e) => onSubmit(e)}
       />
       <Img src={extra} marginLeft={6} marginRight={7} cursorPointer />
     </Flex>
@@ -87,4 +89,5 @@ Input.propTypes = {
   type: PropTypes.string.isRequired,
   invalidInput: PropTypes.bool,
   onChange: PropTypes.func,
+  onSubmit: PropTypes.func,
 };
