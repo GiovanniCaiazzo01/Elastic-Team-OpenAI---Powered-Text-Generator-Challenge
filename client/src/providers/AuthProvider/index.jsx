@@ -1,5 +1,6 @@
 import { useState, useEffect, createContext } from "react";
 import HTTPClient from "../../api/HTTPClient";
+import PropTypes from "prop-types";
 
 const AuthContext = createContext();
 
@@ -30,3 +31,6 @@ const AuthProvider = ({ children }) => {
 };
 
 export { AuthProvider, AuthContext };
+AuthProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
