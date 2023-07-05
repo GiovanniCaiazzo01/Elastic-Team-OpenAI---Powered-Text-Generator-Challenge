@@ -5,13 +5,15 @@ import MainRoutes from "./routes/MainRoutes";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import "./App.css";
-
+import { AuthProvider } from "./providers";
 const App = () => {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-        <ToastContainer />
-        <MainRoutes />
+        <AuthProvider>
+          <ToastContainer />
+          <MainRoutes />
+        </AuthProvider>
       </ThemeProvider>
     </BrowserRouter>
   );
