@@ -8,6 +8,7 @@ export const userQuestion = async (payload) => {
   if (!question) {
     return new Result(false, ERRORS.MISSING_QUESTION);
   }
+
   const TYPES = {
     question: "string",
   };

@@ -3,12 +3,12 @@ import { Container, Flex } from "../../layouts";
 import { ChatFooter } from "./ChatFooter";
 import { ChatHeader } from "./ChatHeader";
 import { ChatSection } from "./ChatSection";
-import HTTPClient from "../../api/HTTPClient";
+import { useChat } from "../../hooks";
 
 const Chat = () => {
   const [userInput, setUserInput] = useState({ chatInput: "" });
-  // const [questions, setQuestions] = useState([]);
-  // const [IaAnswer, setIaAnswer] = useState([]);
+
+  const { makeQuestion, userMessage, iaMessage } = useChat();
 
   const onUserInput = (input) => {
     setUserInput((prev) => ({ ...prev, [input.name]: input.value }));
@@ -16,14 +16,7 @@ const Chat = () => {
 
   const onUserSubmit = async (e) => {
     e.preventDefault();
-    // setQuestions(() => [...questions, userInput.chatInput]);
-
-    // await HTTPClient.post("chat/", undefined, userInput).then((result) =>
-    //   setIaAnswer((prev) => [
-    //     ...prev,
-    //     { message: result.data, userCanWrite: false },
-    //   ])
-    // );
+    await makeQuestion(userInput.chatInput);
   };
 
   return (
@@ -31,7 +24,7 @@ const Chat = () => {
       <Flex fullHeight flexDirection="column" justifyContent={3}>
         <Container>
           <ChatHeader />
-          <ChatSection />
+          <ChatSection userMessage={userMessage} iaMessage={iaMessage} />
         </Container>
         <ChatFooter onChange={onUserInput} onSubmit={(e) => onUserSubmit(e)} />
       </Flex>

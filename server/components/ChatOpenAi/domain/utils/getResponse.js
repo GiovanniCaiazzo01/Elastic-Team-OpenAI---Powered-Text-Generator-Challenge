@@ -17,24 +17,33 @@ export const getResponse = async (question) => {
     USER: "user",
   };
 
-  return await new Promise(async (resolve, reject) => {
-    const completation = await openai.createChatCompletion({
-      model: MODEL,
-      messages: [{ role: ROLES.USER, content: question }],
-    });
+  try {
+    return await new Promise(async (resolve, reject) => {
+      const completation = await openai.createChatCompletion({
+        model: MODEL,
 
-    const ai_response = completation.data.choices[0].message.content;
-
-    if (ai_response.data?.error) {
-      reject(() => {
-        throw new AppError(
-          ai_response.data.type,
-          "none",
-          ai_response.data.error.message,
-          true
-        );
+        messages: [{ role: ROLES.USER, content: question }],
       });
-    }
-    resolve(ai_response);
-  });
+
+      const ai_response = completation.data.choices[0].message.content;
+
+      if (ai_response.data?.error) {
+        reject({
+          type: ai_response.data?.error.type,
+          http: "none",
+          message: ai_response.data?.error.message,
+          isOperational: true,
+        });
+      }
+
+      resolve(ai_response);
+    });
+  } catch (error) {
+    throw new AppError(
+      error.type,
+      error.http,
+      error.message,
+      error.isOperational
+    );
+  }
 };

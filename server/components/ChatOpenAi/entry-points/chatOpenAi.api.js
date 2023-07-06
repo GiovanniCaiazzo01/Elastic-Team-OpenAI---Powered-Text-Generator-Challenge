@@ -3,14 +3,14 @@ import { userQuestion } from "../domain/chatOpenai.domain.js";
 const router = Router();
 
 router.post("/", async (req, res) => {
-  const { chatInput } = req.body;
+  const { question } = req.body;
+  console.log("quante volte vengo chiamato");
 
   const paylaod = {
-    question: chatInput,
+    question,
   };
 
   const result = await userQuestion(paylaod);
-  console.log(result);
   return res.send(result);
 });
 

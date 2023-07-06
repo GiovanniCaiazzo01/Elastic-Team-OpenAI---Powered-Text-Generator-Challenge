@@ -1,8 +1,16 @@
 import { Container, Flex, Input } from "../../../layouts";
 import svgIconSax from "../../../assets/img/iconSax.svg";
 import PropTypes from "prop-types";
+import { useChat } from "../../../hooks";
+import { useEffect } from "react";
 
 const ChatFooter = ({ onChange, onSubmit }) => {
+  const { canWrite } = useChat();
+
+  useEffect(() => {
+    console.log(canWrite);
+  }, [canWrite]);
+
   return (
     <Container
       marginLeft={11}
@@ -13,15 +21,28 @@ const ChatFooter = ({ onChange, onSubmit }) => {
     >
       <form onSubmit={(e) => onSubmit(e)}>
         <Flex fullWidth alignItems={1} justifyContent={1}>
-          <Input
-            fullWidth
-            height={24}
-            type="text"
-            name="chatInput"
-            placeholder="Type yout prompt here..."
-            extra={svgIconSax}
-            onChange={(e) => onChange(e.target)}
-          />
+          {canWrite ? (
+            <Input
+              fullWidth
+              height={24}
+              type="text"
+              name="chatInput"
+              placeholder="Type yout prompt here..."
+              extra={svgIconSax}
+              onChange={(e) => onChange(e.target)}
+            />
+          ) : (
+            <Input
+              fullWidth
+              height={24}
+              type="text"
+              name="chatInput"
+              placeholder="Type yout prompt here..."
+              extra={svgIconSax}
+              onChange={(e) => onChange(e.target)}
+              disabled={true}
+            />
+          )}
         </Flex>
       </form>
     </Container>

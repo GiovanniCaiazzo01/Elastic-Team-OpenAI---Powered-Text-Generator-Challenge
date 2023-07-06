@@ -88,6 +88,12 @@ export const StyledInput = styled.input`
     color: red;
     border-color: red;`}
 
+  ${(props) =>
+    props.disabled &&
+    `
+    opacity: 50%;
+    pointer-events: none;`}
+
   &::placeholder {
     color: ${(props) => props.theme.colors.grey};
     font-family: ${(props) => props.theme.fonts.tertiary};

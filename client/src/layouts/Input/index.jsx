@@ -25,6 +25,7 @@ const Input = ({
   name,
   type,
   invalidInput,
+  disabled,
   onChange,
   onSubmit,
 }) => {
@@ -54,6 +55,7 @@ const Input = ({
         name={name}
         type={type}
         invalidInput={invalidInput}
+        disabled={disabled}
         onChange={(e) => onChange(e)}
         onSubmit={(e) => onSubmit(e)}
       />
@@ -88,6 +90,7 @@ Input.propTypes = {
   name: PropTypes.string,
   type: PropTypes.string.isRequired,
   invalidInput: PropTypes.bool,
+  disabled: PropTypes.bool,
   onChange: PropTypes.func,
   onSubmit: PropTypes.func,
 };

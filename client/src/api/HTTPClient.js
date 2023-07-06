@@ -130,6 +130,24 @@ const HTTPClient = {
 
     return response;
   },
+  iaQuestion: async (url, params, body) => {
+    const response = await fetch(`${BASE_URL}${url}/${params ?? ""}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(body),
+    }).then((response) => response.json());
+
+    response.result
+      ? (response.message += " 🌟✨")
+      : (response.message += " 🙀💔");
+
+    !response.result && toast.error(response.message);
+
+    return response;
+  },
 };
 
 export default HTTPClient;
