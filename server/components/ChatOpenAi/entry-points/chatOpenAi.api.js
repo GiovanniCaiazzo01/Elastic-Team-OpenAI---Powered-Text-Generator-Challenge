@@ -4,7 +4,6 @@ const router = Router();
 
 router.post("/", async (req, res) => {
   const { question } = req.body;
-  console.log("quante volte vengo chiamato");
 
   const paylaod = {
     question,
