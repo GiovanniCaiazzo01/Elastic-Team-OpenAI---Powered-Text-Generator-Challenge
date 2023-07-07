@@ -24,7 +24,7 @@ export const makeJwt = async (data) => {
   const { fullName, ucode, email } = data;
   try {
     return jwt.sign({ fullName, ucode, email }, JWT_SECRET, {
-      expiresIn: "30s",
+      expiresIn: "1h",
     });
   } catch (error) {
     throw new AppError(

@@ -1,4 +1,5 @@
 import { MongoClient } from "mongodb";
+import { AppError } from "../utils/index.js";
 
 const OPTIONS = { useNewUrlParser: true, useUnifiedTopology: true };
 
@@ -12,8 +13,11 @@ export const dbConnection = async (DB_NAME, DB_URI) => {
     );
     return db;
   } catch (error) {
-    throw new Error(
-      "Panic Panic Panic a comet ☄️ destroyed our connection with mongodb atlas supply spacecraft."
+    new AppError(
+      "Panic Panic Panic a comet ☄️ destroyed our connection with mongodb atlas supply spacecraft.",
+      "none",
+      "womething goes wrong with the Db connection",
+      true
     );
   }
 };
