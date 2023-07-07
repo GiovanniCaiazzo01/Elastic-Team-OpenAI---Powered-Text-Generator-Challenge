@@ -11,7 +11,7 @@ const ChatUserMessage = ({ userMessage }) => {
     <Container marginBottom={17}>
       <Flex justifyContent={2}>
         <ChatText textMessage={userMessage} />
-        <Avatar content="GC" marginLeft={7} />
+        <Avatar content="ET" marginLeft={7} />
       </Flex>
     </Container>
   );

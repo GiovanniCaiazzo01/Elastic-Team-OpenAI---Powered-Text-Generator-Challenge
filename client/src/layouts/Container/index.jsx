@@ -22,6 +22,11 @@ const Container = ({
   marginRight,
   marginTop,
   marginBottom,
+  position,
+  top,
+  left,
+  right,
+  bottom,
   children,
 }) => {
   return (
@@ -46,6 +51,11 @@ const Container = ({
       marginRight={marginRight}
       marginTop={marginTop}
       marginBottom={marginBottom}
+      top={top}
+      left={left}
+      right={right}
+      bottom={bottom}
+      position={position}
     >
       {children}
     </StyledContainer>
@@ -75,5 +85,10 @@ Container.propTypes = {
   marginRight: PropTypes.number,
   marginTop: PropTypes.number,
   marginBottom: PropTypes.number,
+  position: PropTypes.string,
+  top: PropTypes.number,
+  left: PropTypes.number,
+  right: PropTypes.number,
+  bottom: PropTypes.number,
   children: PropTypes.node.isRequired,
 };

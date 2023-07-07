@@ -6,6 +6,7 @@ const Avatar = ({ content, marginRight, marginLeft }) => {
   return (
     <Container
       width={40}
+      maxWidth={40}
       height={40}
       padding={3}
       {...dynamicProp}

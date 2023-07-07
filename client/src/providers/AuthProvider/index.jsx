@@ -11,7 +11,8 @@ const AuthProvider = ({ children }) => {
     const isValidToken = await HTTPClient.verifyToken(jwtToken);
     if (!isValidToken) {
       localStorage.removeItem("token");
-      return setToken(() => "");
+      setToken(() => "");
+      return isValidToken;
     }
   };
   const setAuthToken = async (jwtToken) => {

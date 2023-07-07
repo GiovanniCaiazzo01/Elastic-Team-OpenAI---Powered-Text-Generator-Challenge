@@ -31,7 +31,7 @@ const ChatSection = () => {
   return (
     <Container paddingLeft={11} paddingRight={14} marginTop={20}>
       <Flex flexDirection="column" fullHeight>
-        {messageQueue &&
+        {/* {messageQueue &&
           messageQueue.map((m, i) => {
             const isUserMessage = m.origin === "user";
             return isUserMessage ? (
@@ -39,7 +39,22 @@ const ChatSection = () => {
             ) : (
               <ChatIAMessage key={i + "b"} iaMessage={m.message} />
             );
-          })}
+          })} */}
+        <ChatUserMessage userMessage={"ses"} />
+        <ChatUserMessage userMessage={"ses"} />
+        <ChatUserMessage userMessage={"ses"} />
+        <ChatUserMessage userMessage={"ses"} />
+        <ChatUserMessage userMessage={"ses"} />
+        <ChatUserMessage userMessage={"ses"} />
+        <ChatUserMessage userMessage={"ses"} />
+        <ChatUserMessage userMessage={"ses"} />
+        <ChatUserMessage userMessage={"ses"} />
+        <ChatUserMessage userMessage={"ses"} />
+        <ChatUserMessage userMessage={"ses"} />
+        <ChatUserMessage userMessage={"ses"} />
+        <ChatUserMessage userMessage={"ses"} />
+        <ChatUserMessage userMessage={"ses"} />
+        <ChatUserMessage userMessage={"ses"} />
       </Flex>
     </Container>
   );
