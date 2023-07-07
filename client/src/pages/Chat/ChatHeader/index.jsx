@@ -7,8 +7,6 @@ const ChatHeader = () => {
       paddingTop={5}
       paddingLeft={8}
       paddingRight={8}
-      position="fixed"
-      fullWidth
       backgroundColor="white"
       borderBottom={{ px: 0, color: "softGrey" }}
     >
