@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 const Container = ({
   width,
   maxWidth,
+  fullWidth,
   height,
   backgroundColor,
   borderRadius,
@@ -27,6 +28,7 @@ const Container = ({
   left,
   right,
   bottom,
+
   children,
 }) => {
   return (
@@ -34,6 +36,7 @@ const Container = ({
       width={width}
       maxWidth={maxWidth}
       height={height}
+      fullWidth={fullWidth}
       backgroundColor={backgroundColor}
       borderRadius={borderRadius}
       border={border}
@@ -68,6 +71,7 @@ Container.propTypes = {
   width: PropTypes.number,
   maxWidth: PropTypes.number,
   height: PropTypes.number,
+  fullWidth: PropTypes.bool,
   backgroundColor: PropTypes.string,
   borderRadius: PropTypes.number,
   border: PropTypes.object,
@@ -86,9 +90,9 @@ Container.propTypes = {
   marginTop: PropTypes.number,
   marginBottom: PropTypes.number,
   position: PropTypes.string,
-  top: PropTypes.number,
-  left: PropTypes.number,
-  right: PropTypes.number,
-  bottom: PropTypes.number,
+  top: PropTypes.string,
+  left: PropTypes.string,
+  right: PropTypes.string,
+  bottom: PropTypes.string,
   children: PropTypes.node.isRequired,
 };

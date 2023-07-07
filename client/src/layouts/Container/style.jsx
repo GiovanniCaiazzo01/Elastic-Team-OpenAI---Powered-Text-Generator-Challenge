@@ -4,7 +4,8 @@ export const StyledContainer = styled.div`
   ${(props) => props.width && `width: ${props.width}px;`}
   ${(props) => props.maxWidth && `max-width: ${props.maxWidth}px;`}
   ${(props) => props.height && `height: ${props.height}px;`}
-  
+  ${(props) =>
+    props.fullWidth && !props.width && !props.maxWidth && "width:100%;"}
   // PADDING SECTION
   ${(props) =>
     props.padding && `padding: ${props.theme.sizes.px[props.padding]};`}
