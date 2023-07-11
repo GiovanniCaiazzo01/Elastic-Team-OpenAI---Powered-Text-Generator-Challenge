@@ -18,7 +18,7 @@ This GitHub project is a chat application inspired by ChatGPT, developed for a c
 
 
 ## Architecture
-The project structure is relying on the architectural pattern [https://en.wikipedia.org/wiki/Multitier_architecture](https://it.wikipedia.org/wiki/Architettura_three-tier)
+The project structure is relying on the architectural pattern [Three-tier architecture](https://it.wikipedia.org/wiki/Architettura_three-tier)
 ![FlowChart drawio](https://github.com/GiovanniCaiazzo01/Elastic-Team-OpenAI---Powered-Text-Generator-Challenge/assets/75174054/59b324a0-03b8-44ea-824b-29487bae8b5d)
 
 ## Contributions
