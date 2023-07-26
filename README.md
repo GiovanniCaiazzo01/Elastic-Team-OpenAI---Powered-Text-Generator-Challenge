@@ -1,6 +1,6 @@
 # Elastic-Team-OpenAI---Powered-Text-Generator-Challenge
 
-This GitHub project is a chat application inspired by ChatGPT, developed for a challenge by Distributed, an organization or company. It focuses on creating a chatbot that replicates human-like conversations.
+This GitHub project is a chat application inspired by ChatGPT, developed for a challenge by Distributed. It focuses on creating a chatbot that replicates human-like conversations.
 ![image](https://github.com/GiovanniCaiazzo01/Elastic-Team-OpenAI---Powered-Text-Generator-Challenge/assets/75174054/df6ce579-4140-4881-a474-32702698ea99)
 
 
