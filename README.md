@@ -26,13 +26,7 @@
     -   [Tech Stack](#space_invader-tech-stack)
     -   [Features](#dart-features)
     -   [Color Reference](#art-color-reference)
--   [Getting Started](#toolbox-getting-started)
-    -   [Prerequisites](#bangbang-prerequisites)
-    -   [Installation](#gear-installation)
-    -   [Environment Variables](#key-environment-variables)
-    -   [Run Locally](#running-run-locally)
-    -   [Running Tests](#test_tube-running-tests)
-    -   [Deploying the app](#bomb-deploying-the-app)
+-   [Architecture](#Architecture)
 -   [License](#warning-license)
 -   [Contact](#handshake-contact)
 -   [Acknowledgements](#gem-acknowledgements)
@@ -114,7 +108,7 @@ The project structure is relying on the architectural pattern [Three-tier archit
 | White Grey    | ![#F1F1F1](https://via.placeholder.com/10/f1f1f1?text=+) #F1F1F1       |
 | Brand Green   | ![#46B455](https://via.placeholder.com/10/46b455?text=+) #46B455       |
 
-<!-- Getting Started -->
+<!-- License -->
 
 ## :warning: License
 
