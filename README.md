@@ -48,7 +48,7 @@ For reference, the challenge details are on this page: [Distributed Challenge](h
 <!-- Screenshots -->
 
 ### :camera: Screenshots
-  ![image](https://github.com/GiovanniCaiazzo01/Elastic-Team-OpenAI---Powered-Text-Generator-Challenge/client/assets/img/screenshot.jpg)
+  ![image](https://github.com/GiovanniCaiazzo01/Elastic-Team-OpenAI---Powered-Text-Generator-Challenge/assets/img/screenshot.jpg)
 
 <!-- TechStack -->
 
@@ -92,7 +92,7 @@ For reference, the challenge details are on this page: [Distributed Challenge](h
 
 ## Architecture
 The project structure is relying on the architectural pattern [Three-tier architecture](https://it.wikipedia.org/wiki/Architettura_three-tier)
-![FlowChart drawio](https://github.com/GiovanniCaiazzo01/Elastic-Team-OpenAI---Powered-Text-Generator-Challenge/client/assets/img/arch.png)
+![FlowChart drawio](https://github.com/GiovanniCaiazzo01/Elastic-Team-OpenAI---Powered-Text-Generator-Challenge/assets/img/arch.png)
 
 
 <!-- Color Reference -->
