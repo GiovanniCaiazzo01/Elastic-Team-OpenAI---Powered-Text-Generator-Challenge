@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="public/static/images/app-logo.svg" alt="logo" width="100" height="auto" />
+  <img src="img/app-logo.svg" alt="logo" width="100" height="auto" />
   <h1>OpenAI Text Generator Challenge</h1>
   
   <p>
