@@ -26,9 +26,8 @@
     -   [Tech Stack](#space_invader-tech-stack)
     -   [Features](#dart-features)
     -   [Color Reference](#art-color-reference)
--   [Architecture](#Architecture)
+    -   [Architecture](#architecture)
 -   [License](#warning-license)
--   [Contact](#handshake-contact)
 -   [Acknowledgements](#gem-acknowledgements)
 
 <!-- About the project -->
